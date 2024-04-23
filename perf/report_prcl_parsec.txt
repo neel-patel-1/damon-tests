@@ -1,0 +1,440 @@
+=======
+Summary
+=======
+
+runtime               orig     prcl     (overhead)
+parsec3/blackscholes  115.545  125.029  (8.21)
+parsec3/bodytrack     463.064  502.933  (8.61)
+parsec3/canneal       226.221  234.495  (3.66)
+parsec3/dedup         29.749   31.745   (6.71)
+parsec3/facesim       1627.590 1682.990 (3.40)
+parsec3/fluidanimate  1374.000 1530.730 (11.41)
+parsec3/freqmine      336.407  345.418  (2.68)
+parsec3/raytrace      380.228  385.126  (1.29)
+parsec3/streamcluster 903.615  917.987  (1.59)
+parsec3/swaptions     304.063  307.313  (1.07)
+parsec3/vips          149.418  155.486  (4.06)
+total                 5909.910 6219.260 (5.23)
+average               537.265  565.387  (4.79)
+
+
+kdamond_cpu_util      orig  prcl  (overhead)
+parsec3/blackscholes  0.000 0.719 (0.72)
+parsec3/bodytrack     0.000 1.023 (1.02)
+parsec3/canneal       0.000 0.281 (0.28)
+parsec3/dedup         0.000 1.141 (1.14)
+parsec3/facesim       0.000 0.719 (0.72)
+parsec3/fluidanimate  0.000 1.569 (1.57)
+parsec3/freqmine      0.000 0.522 (0.52)
+parsec3/raytrace      0.000 0.480 (0.48)
+parsec3/streamcluster 0.000 0.255 (0.26)
+parsec3/swaptions     0.000 0.215 (0.21)
+parsec3/vips          0.000 0.751 (0.75)
+total                 0.000 7.675 (7.67)
+average               0.000 0.698 (0.70)
+
+
+memused.avg           orig         prcl         (overhead)
+parsec3/blackscholes  1821343.000  1677320.000  (-7.91)
+parsec3/bodytrack     1747178.000  1570186.000  (-10.13)
+parsec3/canneal       1185164.000  1291936.000  (9.01)
+parsec3/dedup         2694124.000  2647207.000  (-1.74)
+parsec3/facesim       817959.000   754636.000   (-7.74)
+parsec3/fluidanimate  882142.000   559288.000   (-36.60)
+parsec3/freqmine      1154101.000  934972.000   (-18.99)
+parsec3/raytrace      2065936.000  1738974.000  (-15.83)
+parsec3/streamcluster 245540.000   302087.000   (23.03)
+parsec3/swaptions     34321.000    70759.000    (106.17)
+parsec3/vips          3027659.000  2938893.000  (-2.93)
+total                 15675467.000 14486258.000 (-7.59)
+average               1425040.000  1316930.000  (3.30)
+
+
+rss.avg               orig        prcl        (overhead)
+parsec3/blackscholes  590703.000  267284.000  (-54.75)
+parsec3/bodytrack     31907.000   4620.000    (-85.52)
+parsec3/canneal       834911.000  834899.000  (-0.00)
+parsec3/dedup         1147829.000 414001.000  (-63.93)
+parsec3/facesim       310114.000  117403.000  (-62.14)
+parsec3/fluidanimate  531968.000  256508.000  (-51.78)
+parsec3/freqmine      542288.000  40964.000   (-92.45)
+parsec3/raytrace      951379.000  78546.000   (-91.74)
+parsec3/streamcluster 110823.000  109938.000  (-0.80)
+parsec3/swaptions     4649.000    3160.000    (-32.03)
+parsec3/vips          33221.000   26449.000   (-20.38)
+total                 5089792.000 2153772.000 (-57.68)
+average               462708.000  195797.000  (-50.50)
+
+
+pgmajfaults           orig     prcl         (overhead)
+parsec3/blackscholes  82.000   998745.000   (1217880.00)
+parsec3/bodytrack     178.000  1491575.000  (837863.00)
+parsec3/canneal       170.000  127507.000   (74904.10)
+parsec3/dedup         81.000   167846.000   (207117.00)
+parsec3/facesim       287.000  7718836.000  (2689390.00)
+parsec3/fluidanimate  175.000  24775348.000 (14157200.00)
+parsec3/freqmine      173.000  670083.000   (387231.00)
+parsec3/raytrace      195.000  666360.000   (341623.00)
+parsec3/streamcluster 169.000  31276.000    (18406.50)
+parsec3/swaptions     168.000  9028.000     (5273.81)
+parsec3/vips          106.000  165625.000   (156150.00)
+total                 1784.000 36822229.000 (2063930.00)
+average               162.182  3347480.000  (1826640.00)
+
+
+psi_mem_some_us       orig  prcl         (overhead)
+parsec3/blackscholes  0.000 1769961.000  (1769961.00)
+parsec3/bodytrack     0.000 6675115.000  (6675115.00)
+parsec3/canneal       0.000 329239.000   (329239.00)
+parsec3/dedup         0.000 5326.000     (5326.00)
+parsec3/facesim       0.000 17091320.000 (17091320.00)
+parsec3/fluidanimate  0.000 24321781.000 (24321781.00)
+parsec3/freqmine      0.000 1456253.000  (1456253.00)
+parsec3/raytrace      0.000 1017314.000  (1017314.00)
+parsec3/streamcluster 0.000 90423.000    (90423.00)
+parsec3/swaptions     0.000 81898.000    (81898.00)
+parsec3/vips          0.000 802090.000   (802090.00)
+total                 0.000 53640720.000 (53640720.00)
+average               0.000 4876430.000  (4876430.00)
+
+
+=====
+Stats
+=====
+
+runtime_avg           orig     prcl
+parsec3/blackscholes  115.545  125.029
+parsec3/bodytrack     463.064  502.933
+parsec3/canneal       226.221  234.495
+parsec3/dedup         29.749   31.745
+parsec3/facesim       1627.590 1682.990
+parsec3/fluidanimate  1374.000 1530.730
+parsec3/freqmine      336.407  345.418
+parsec3/raytrace      380.228  385.126
+parsec3/streamcluster 903.615  917.987
+parsec3/swaptions     304.063  307.313
+parsec3/vips          149.418  155.486
+
+
+kdamond_cpu_util_avg  orig  prcl
+parsec3/blackscholes  0.000 0.719
+parsec3/bodytrack     0.000 1.023
+parsec3/canneal       0.000 0.281
+parsec3/dedup         0.000 1.141
+parsec3/facesim       0.000 0.719
+parsec3/fluidanimate  0.000 1.569
+parsec3/freqmine      0.000 0.522
+parsec3/raytrace      0.000 0.480
+parsec3/streamcluster 0.000 0.255
+parsec3/swaptions     0.000 0.215
+parsec3/vips          0.000 0.751
+
+
+memused.avg_avg       orig        prcl
+parsec3/blackscholes  1821343.000 1677320.000
+parsec3/bodytrack     1747178.000 1570186.000
+parsec3/canneal       1185164.000 1291936.000
+parsec3/dedup         2694124.000 2647207.000
+parsec3/facesim       817959.000  754636.000
+parsec3/fluidanimate  882142.000  559288.000
+parsec3/freqmine      1154101.000 934972.000
+parsec3/raytrace      2065936.000 1738974.000
+parsec3/streamcluster 245540.000  302087.000
+parsec3/swaptions     34321.000   70759.000
+parsec3/vips          3027659.000 2938893.000
+
+
+rss.avg_avg           orig        prcl
+parsec3/blackscholes  590703.000  267284.000
+parsec3/bodytrack     31907.000   4620.000
+parsec3/canneal       834911.000  834899.000
+parsec3/dedup         1147829.000 414001.000
+parsec3/facesim       310114.000  117403.000
+parsec3/fluidanimate  531968.000  256508.000
+parsec3/freqmine      542288.000  40964.000
+parsec3/raytrace      951379.000  78546.000
+parsec3/streamcluster 110823.000  109938.000
+parsec3/swaptions     4649.000    3160.000
+parsec3/vips          33221.000   26449.000
+
+
+pgmajfaults_avg       orig    prcl
+parsec3/blackscholes  82.000  998745.000
+parsec3/bodytrack     178.000 1491575.000
+parsec3/canneal       170.000 127507.000
+parsec3/dedup         81.000  167846.000
+parsec3/facesim       287.000 7718836.000
+parsec3/fluidanimate  175.000 24775348.000
+parsec3/freqmine      173.000 670083.000
+parsec3/raytrace      195.000 666360.000
+parsec3/streamcluster 169.000 31276.000
+parsec3/swaptions     168.000 9028.000
+parsec3/vips          106.000 165625.000
+
+
+psi_mem_some_us_avg   orig  prcl
+parsec3/blackscholes  0.000 1769961.000
+parsec3/bodytrack     0.000 6675115.000
+parsec3/canneal       0.000 329239.000
+parsec3/dedup         0.000 5326.000
+parsec3/facesim       0.000 17091320.000
+parsec3/fluidanimate  0.000 24321781.000
+parsec3/freqmine      0.000 1456253.000
+parsec3/raytrace      0.000 1017314.000
+parsec3/streamcluster 0.000 90423.000
+parsec3/swaptions     0.000 81898.000
+parsec3/vips          0.000 802090.000
+
+
+runtime_stdev         orig  prcl
+parsec3/blackscholes  0.000 0.000
+parsec3/bodytrack     0.000 0.000
+parsec3/canneal       0.000 0.000
+parsec3/dedup         0.000 0.000
+parsec3/facesim       0.000 0.000
+parsec3/fluidanimate  0.000 0.000
+parsec3/freqmine      0.000 0.000
+parsec3/raytrace      0.000 0.000
+parsec3/streamcluster 0.000 0.000
+parsec3/swaptions     0.000 0.000
+parsec3/vips          0.000 0.000
+
+
+kdamond_cpu_util_stdev orig  prcl
+parsec3/blackscholes   0.000 0.000
+parsec3/bodytrack      0.000 0.000
+parsec3/canneal        0.000 0.000
+parsec3/dedup          0.000 0.000
+parsec3/facesim        0.000 0.000
+parsec3/fluidanimate   0.000 0.000
+parsec3/freqmine       0.000 0.000
+parsec3/raytrace       0.000 0.000
+parsec3/streamcluster  0.000 0.000
+parsec3/swaptions      0.000 0.000
+parsec3/vips           0.000 0.000
+
+
+memused.avg_stdev     orig  prcl
+parsec3/blackscholes  0.000 0.000
+parsec3/bodytrack     0.000 0.000
+parsec3/canneal       0.000 0.000
+parsec3/dedup         0.000 0.000
+parsec3/facesim       0.000 0.000
+parsec3/fluidanimate  0.000 0.000
+parsec3/freqmine      0.000 0.000
+parsec3/raytrace      0.000 0.000
+parsec3/streamcluster 0.000 0.000
+parsec3/swaptions     0.000 0.000
+parsec3/vips          0.000 0.000
+
+
+rss.avg_stdev         orig  prcl
+parsec3/blackscholes  0.000 0.000
+parsec3/bodytrack     0.000 0.000
+parsec3/canneal       0.000 0.000
+parsec3/dedup         0.000 0.000
+parsec3/facesim       0.000 0.000
+parsec3/fluidanimate  0.000 0.000
+parsec3/freqmine      0.000 0.000
+parsec3/raytrace      0.000 0.000
+parsec3/streamcluster 0.000 0.000
+parsec3/swaptions     0.000 0.000
+parsec3/vips          0.000 0.000
+
+
+pgmajfaults_stdev     orig  prcl
+parsec3/blackscholes  0.000 0.000
+parsec3/bodytrack     0.000 0.000
+parsec3/canneal       0.000 0.000
+parsec3/dedup         0.000 0.000
+parsec3/facesim       0.000 0.000
+parsec3/fluidanimate  0.000 0.000
+parsec3/freqmine      0.000 0.000
+parsec3/raytrace      0.000 0.000
+parsec3/streamcluster 0.000 0.000
+parsec3/swaptions     0.000 0.000
+parsec3/vips          0.000 0.000
+
+
+psi_mem_some_us_stdev orig  prcl
+parsec3/blackscholes  0.000 0.000
+parsec3/bodytrack     0.000 0.000
+parsec3/canneal       0.000 0.000
+parsec3/dedup         0.000 0.000
+parsec3/facesim       0.000 0.000
+parsec3/fluidanimate  0.000 0.000
+parsec3/freqmine      0.000 0.000
+parsec3/raytrace      0.000 0.000
+parsec3/streamcluster 0.000 0.000
+parsec3/swaptions     0.000 0.000
+parsec3/vips          0.000 0.000
+
+
+runtime_min           orig     prcl
+parsec3/blackscholes  115.545  125.029
+parsec3/bodytrack     463.064  502.933
+parsec3/canneal       226.221  234.495
+parsec3/dedup         29.749   31.745
+parsec3/facesim       1627.590 1682.990
+parsec3/fluidanimate  1374.000 1530.730
+parsec3/freqmine      336.407  345.418
+parsec3/raytrace      380.228  385.126
+parsec3/streamcluster 903.615  917.987
+parsec3/swaptions     304.063  307.313
+parsec3/vips          149.418  155.486
+
+
+kdamond_cpu_util_min  orig  prcl
+parsec3/blackscholes  0.000 0.719
+parsec3/bodytrack     0.000 1.023
+parsec3/canneal       0.000 0.281
+parsec3/dedup         0.000 1.141
+parsec3/facesim       0.000 0.719
+parsec3/fluidanimate  0.000 1.569
+parsec3/freqmine      0.000 0.522
+parsec3/raytrace      0.000 0.480
+parsec3/streamcluster 0.000 0.255
+parsec3/swaptions     0.000 0.215
+parsec3/vips          0.000 0.751
+
+
+memused.avg_min       orig        prcl
+parsec3/blackscholes  1821343.000 1677320.000
+parsec3/bodytrack     1747178.000 1570186.000
+parsec3/canneal       1185164.000 1291936.000
+parsec3/dedup         2694124.000 2647207.000
+parsec3/facesim       817959.000  754636.000
+parsec3/fluidanimate  882142.000  559288.000
+parsec3/freqmine      1154101.000 934972.000
+parsec3/raytrace      2065936.000 1738974.000
+parsec3/streamcluster 245540.000  302087.000
+parsec3/swaptions     34321.000   70759.000
+parsec3/vips          3027659.000 2938893.000
+
+
+rss.avg_min           orig        prcl
+parsec3/blackscholes  590703.000  267284.000
+parsec3/bodytrack     31907.000   4620.000
+parsec3/canneal       834911.000  834899.000
+parsec3/dedup         1147829.000 414001.000
+parsec3/facesim       310114.000  117403.000
+parsec3/fluidanimate  531968.000  256508.000
+parsec3/freqmine      542288.000  40964.000
+parsec3/raytrace      951379.000  78546.000
+parsec3/streamcluster 110823.000  109938.000
+parsec3/swaptions     4649.000    3160.000
+parsec3/vips          33221.000   26449.000
+
+
+pgmajfaults_min       orig    prcl
+parsec3/blackscholes  82.000  998745.000
+parsec3/bodytrack     178.000 1491575.000
+parsec3/canneal       170.000 127507.000
+parsec3/dedup         81.000  167846.000
+parsec3/facesim       287.000 7718836.000
+parsec3/fluidanimate  175.000 24775348.000
+parsec3/freqmine      173.000 670083.000
+parsec3/raytrace      195.000 666360.000
+parsec3/streamcluster 169.000 31276.000
+parsec3/swaptions     168.000 9028.000
+parsec3/vips          106.000 165625.000
+
+
+psi_mem_some_us_min   orig  prcl
+parsec3/blackscholes  0.000 1769961.000
+parsec3/bodytrack     0.000 6675115.000
+parsec3/canneal       0.000 329239.000
+parsec3/dedup         0.000 5326.000
+parsec3/facesim       0.000 17091320.000
+parsec3/fluidanimate  0.000 24321781.000
+parsec3/freqmine      0.000 1456253.000
+parsec3/raytrace      0.000 1017314.000
+parsec3/streamcluster 0.000 90423.000
+parsec3/swaptions     0.000 81898.000
+parsec3/vips          0.000 802090.000
+
+
+runtime_max           orig     prcl
+parsec3/blackscholes  115.545  125.029
+parsec3/bodytrack     463.064  502.933
+parsec3/canneal       226.221  234.495
+parsec3/dedup         29.749   31.745
+parsec3/facesim       1627.590 1682.990
+parsec3/fluidanimate  1374.000 1530.730
+parsec3/freqmine      336.407  345.418
+parsec3/raytrace      380.228  385.126
+parsec3/streamcluster 903.615  917.987
+parsec3/swaptions     304.063  307.313
+parsec3/vips          149.418  155.486
+
+
+kdamond_cpu_util_max  orig  prcl
+parsec3/blackscholes  0.000 0.719
+parsec3/bodytrack     0.000 1.023
+parsec3/canneal       0.000 0.281
+parsec3/dedup         0.000 1.141
+parsec3/facesim       0.000 0.719
+parsec3/fluidanimate  0.000 1.569
+parsec3/freqmine      0.000 0.522
+parsec3/raytrace      0.000 0.480
+parsec3/streamcluster 0.000 0.255
+parsec3/swaptions     0.000 0.215
+parsec3/vips          0.000 0.751
+
+
+memused.avg_max       orig        prcl
+parsec3/blackscholes  1821343.000 1677320.000
+parsec3/bodytrack     1747178.000 1570186.000
+parsec3/canneal       1185164.000 1291936.000
+parsec3/dedup         2694124.000 2647207.000
+parsec3/facesim       817959.000  754636.000
+parsec3/fluidanimate  882142.000  559288.000
+parsec3/freqmine      1154101.000 934972.000
+parsec3/raytrace      2065936.000 1738974.000
+parsec3/streamcluster 245540.000  302087.000
+parsec3/swaptions     34321.000   70759.000
+parsec3/vips          3027659.000 2938893.000
+
+
+rss.avg_max           orig        prcl
+parsec3/blackscholes  590703.000  267284.000
+parsec3/bodytrack     31907.000   4620.000
+parsec3/canneal       834911.000  834899.000
+parsec3/dedup         1147829.000 414001.000
+parsec3/facesim       310114.000  117403.000
+parsec3/fluidanimate  531968.000  256508.000
+parsec3/freqmine      542288.000  40964.000
+parsec3/raytrace      951379.000  78546.000
+parsec3/streamcluster 110823.000  109938.000
+parsec3/swaptions     4649.000    3160.000
+parsec3/vips          33221.000   26449.000
+
+
+pgmajfaults_max       orig    prcl
+parsec3/blackscholes  82.000  998745.000
+parsec3/bodytrack     178.000 1491575.000
+parsec3/canneal       170.000 127507.000
+parsec3/dedup         81.000  167846.000
+parsec3/facesim       287.000 7718836.000
+parsec3/fluidanimate  175.000 24775348.000
+parsec3/freqmine      173.000 670083.000
+parsec3/raytrace      195.000 666360.000
+parsec3/streamcluster 169.000 31276.000
+parsec3/swaptions     168.000 9028.000
+parsec3/vips          106.000 165625.000
+
+
+psi_mem_some_us_max   orig  prcl
+parsec3/blackscholes  0.000 1769961.000
+parsec3/bodytrack     0.000 6675115.000
+parsec3/canneal       0.000 329239.000
+parsec3/dedup         0.000 5326.000
+parsec3/facesim       0.000 17091320.000
+parsec3/fluidanimate  0.000 24321781.000
+parsec3/freqmine      0.000 1456253.000
+parsec3/raytrace      0.000 1017314.000
+parsec3/streamcluster 0.000 90423.000
+parsec3/swaptions     0.000 81898.000
+parsec3/vips          0.000 802090.000
+
+
