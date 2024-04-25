@@ -46,6 +46,9 @@ elif [ "$work_category" = "mysql" ]
 then
 	timeout=$(echo $work | awk -F'-' '{print $2}')
 	RUN_CMD="sleep \"$timeout\""
+elif [ "$work_category" = "masim" ]
+then
+    RUN_CMD="bash -c \"cd $repos_dir/masim && ./masim ./configs/$work.cfg\""
 else
 	echo "Unsupported work category $work_category"
 	exit 1

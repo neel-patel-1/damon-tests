@@ -8,11 +8,19 @@ parsec_workloads+="fluidanimate freqmine raytrace streamcluster swaptions "
 parsec_workloads+="vips"
 #parsec_workloads="blackscholes "
 
+masim_configs="stairs"
+
 workloads=""
 for w in $parsec_workloads
 do
 	workloads+="parsec3/$w "
 done
+
+for w in $masim_configs
+do
+	workloads+="masim/$w "
+done
+
 vars="orig prcl ttmo"
 
 VARIANTS=""
