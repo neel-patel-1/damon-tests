@@ -86,6 +86,9 @@ then
 elif [ "$work_category" = "mysql" ]
 then
 	cmdname="mysqld"
+elif [ "$work_category" = "masim" ]
+then
+	cmdname="masim"
 fi
 
 for i in {1..10}
