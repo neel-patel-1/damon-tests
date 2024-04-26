@@ -48,7 +48,7 @@ then
 	RUN_CMD="sleep \"$timeout\""
 elif [ "$work_category" = "masim" ]
 then
-    RUN_CMD="{ time bash -c \" cd ./runners/main/../../../..//masim && ./masim ./configs/fast_phases.cfg\" ; } 2>&1"
+    RUN_CMD="{ time bash -c \" cd ./runners/main/../../../..//masim && ./masim ./configs/$work.cfg\" ; } 2>&1"
     
 else
 	echo "Unsupported work category $work_category"
