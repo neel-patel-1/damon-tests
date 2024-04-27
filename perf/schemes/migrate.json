@@ -1,6 +1,7 @@
 [
     {
         "action": "migrate_cold", 
+		"target_nid": "1",
         "access_pattern": {
             "sz_bytes": {
                 "min": "4.000 KiB", 
@@ -36,6 +37,7 @@
     },
 	{
         "action": "migrate_hot", 
+		"target_nid": "0",
         "access_pattern": {
             "sz_bytes": {
                 "min": "4.000 KiB", 
