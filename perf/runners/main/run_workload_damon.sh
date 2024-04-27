@@ -60,7 +60,7 @@ RUN_CMD+=" | tee $ODIR/commlog"
 echo "RUN_CMD: $RUN_CMD"
 
 # ttmo for too-simplified TMO (to be compared with plrus)
-if [ "$var" = "orig" ] || [ "$var" = "thp" ] || [ "$var" = "ttmo" ]
+if [ "$var" = "orig" ] || [ "$var" = "thp" ] || [ "$var" = "ttmo" ] || [ "$var" = "default_numa" ]
 then
 	if [ "$var" = "thp" ]
 	then
@@ -113,7 +113,7 @@ custom_schemes_dir="$schemes_dir/$work_category/$work"
 if [ "$var" = "rec" ]
 then
 	sudo timeout "$timeout" "$DAMO" record "$pid" --out "$ODIR/damon.data"
-elif [ "$var" == "ethp" ] || [[ "$var" == "prcl"* ]] || [[ "$var" == "darc"* ]]
+elif [ "$var" == "ethp" ] || [[ "$var" == "prcl"* ]] || [[ "$var" == "darc"* ]] || [[ "$var" == "migrate" ]]
 then
 	if [ -f "$custom_schemes_dir/$var.json" ]
 	then
@@ -159,6 +159,7 @@ then
 	sudo "$DAMO" stop
 else
 	echo "Wrong var $var"
+	echo "searched in $schemes_dir"
 	killall $cmdname
 	exit 1
 fi

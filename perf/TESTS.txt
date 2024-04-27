@@ -1,0 +1,5 @@
+
+# compare default numa balancing with damon's migrate_hot and migrate_cold
+```
+n869p538@ubuntu:perf$ sudo ./migrate_run.sh
+```
