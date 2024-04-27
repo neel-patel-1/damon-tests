@@ -2,3 +2,5 @@ results/*
 reports/*
 results.*
 report.*
+*.sw[a-z]
+report/
