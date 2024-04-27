@@ -46,6 +46,10 @@ elif [ "$work_category" = "mysql" ]
 then
 	timeout=$(echo $work | awk -F'-' '{print $2}')
 	RUN_CMD="sleep \"$timeout\""
+elif [ "$work_category" = "masim" ]
+then
+    RUN_CMD="{ time bash -c \" cd ./runners/main/../../../..//masim && ./masim ./configs/$work.cfg\" ; } 2>&1"
+    
 else
 	echo "Unsupported work category $work_category"
 	exit 1
@@ -83,6 +87,9 @@ then
 elif [ "$work_category" = "mysql" ]
 then
 	cmdname="mysqld"
+elif [ "$work_category" = "masim" ]
+then
+	cmdname="masim"
 fi
 
 for i in {1..10}
@@ -121,7 +128,7 @@ then
 		scheme="$schemes_dir/$var.damos"
 	fi
 	echo "apply scheme '$scheme'"
-	sudo timeout "$timeout" "$DAMO" schemes "$pid" --schemes "$scheme"
+	sudo timeout "$timeout" "$DAMO" record "$pid" --schemes "$scheme"
 elif [ "$var" = "prec" ]
 then
 	sudo timeout "$timeout" "$DAMO" record paddr --out "$ODIR/damon.data" &

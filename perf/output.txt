@@ -1,0 +1,245 @@
+Setting up swapspace version 1, size = 4 GiB (4294963200 bytes)
+no label, UUID=69b5ba06-5037-4895-8099-9f3cf948b12f
+zram swap (4G) enabled
+1 iter of ./parsec3/blackscholes/orig
+parsec3 blackscholes
+RUN_CMD: bash -c "cd ./runners/main/../../../..//parsec-benchmark && source ./env.sh && 		parsecmgmt -a run -p blackscholes -i native -n 1" | tee /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/orig/01/commlog
+[PARSEC] Benchmarks to run:  parsec.blackscholes
+
+[PARSEC] [========== Running benchmark parsec.blackscholes [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'native'.
+in_10M.txt
+[PARSEC] Running 'time /home/shared/swap_profiling/parsec-benchmark/pkgs/apps/blackscholes/inst/amd64-linux.gcc/bin/blackscholes 1 in_10M.txt prices.txt':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+Num of Options: 10000000
+Num of Runs: 100
+Size of data: 400000000
+
+real	1m56.006s
+user	1m55.554s
+sys	0m0.449s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Bienia. Benchmarking Modern Multiprocessors. Ph.D. Thesis, 2011.
+[PARSEC]
+[PARSEC] Done.
+[12:44:23]  do exp {
+  start:
+	./runners/start/0000_record_kernel_version.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/orig/01
+	./runners/start/0001_sync_drop_caches.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/orig/01
+  main:
+	./runners/main/run_workload_damon.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/orig/01
+  back:
+	./runners/back/0001_memfree_stat.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/orig/01
+	./runners/back/0002_pswpin_stat.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/orig/01
+	./runners/back/0003_pswpout_stat.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/orig/01
+	./runners/back/0004_memfp.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/orig/01
+	./runners/back/0005_schemes_stat.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/orig/01
+	./runners/back/0006_thp_stat.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/orig/01
+	./runners/back/0007_kdamond_cpu_util.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/orig/01
+	./runners/back/0008_mem_additional_stat.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/orig/01
+	./runners/back/0009_ttmo.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/orig/01
+	./runners/back/0010_mempsi.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/orig/01
+	./runners/back/0011_lru_stat.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/orig/01
+	./runners/back/0012_psi_tuning.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/orig/01
+	./runners/back/0013_lru_tuning.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/orig/01
+  end:
+	./runners/end/0001_dmesg.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/orig/01
+	chown -R root:root /home/shared/swap_profiling/damon-tests/perf/results
+  check:
+
+}
+[12:46:22]  ./runners/main/run_workload_damon.sh /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/orig/01 (88689) terminated
+[12:46:22]  terminate tasks of exp {
+  start:
+	./runners/start/0000_record_kernel_version.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/orig/01
+	./runners/start/0001_sync_drop_caches.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/orig/01
+  main:
+	./runners/main/run_workload_damon.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/orig/01
+  back:
+	./runners/back/0001_memfree_stat.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/orig/01
+	./runners/back/0002_pswpin_stat.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/orig/01
+	./runners/back/0003_pswpout_stat.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/orig/01
+	./runners/back/0004_memfp.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/orig/01
+	./runners/back/0005_schemes_stat.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/orig/01
+	./runners/back/0006_thp_stat.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/orig/01
+	./runners/back/0007_kdamond_cpu_util.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/orig/01
+	./runners/back/0008_mem_additional_stat.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/orig/01
+	./runners/back/0009_ttmo.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/orig/01
+	./runners/back/0010_mempsi.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/orig/01
+	./runners/back/0011_lru_stat.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/orig/01
+	./runners/back/0012_psi_tuning.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/orig/01
+	./runners/back/0013_lru_tuning.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/orig/01
+  end:
+	./runners/end/0001_dmesg.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/orig/01
+	chown -R root:root /home/shared/swap_profiling/damon-tests/perf/results
+  check:
+
+}
+[12:46:22]  kill background procs
+1 iter of ./parsec3/blackscholes/test
+parsec3 blackscholes
+RUN_CMD: bash -c "cd ./runners/main/../../../..//parsec-benchmark && source ./env.sh && 		parsecmgmt -a run -p blackscholes -i native -n 1" | tee /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/test/01/commlog
+wait for pidof blackscholes
+wait for (/sys/kernel/mm/damon/admin/kdamonds/0/pid) creation
+wait for pidof blackscholes
+[PARSEC] Benchmarks to run:  parsec.blackscholes
+
+[PARSEC] [========== Running benchmark parsec.blackscholes [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'native'.
+in_10M.txt
+wait for (/sys/kernel/mm/damon/admin/kdamonds/0/pid) creation
+wait for pidof blackscholes
+[PARSEC] Running 'time /home/shared/swap_profiling/parsec-benchmark/pkgs/apps/blackscholes/inst/amd64-linux.gcc/bin/blackscholes 1 in_10M.txt prices.txt':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+wait for (/sys/kernel/mm/damon/admin/kdamonds/0/pid) creation
+apply scheme '/home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/test/01/../../../../../../perf//schemes/parsec3/blackscholes/test.json'
+wait for kdamond run
+monitor kdamond (93957)
+Num of Options: 10000000
+Num of Runs: 100
+Size of data: 400000000
+
+real	2m9.203s
+user	1m59.372s
+sys	0m9.817s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Bienia. Benchmarking Modern Multiprocessors. Ph.D. Thesis, 2011.
+[PARSEC]
+[PARSEC] Done.
+Press Ctrl+C to stop
+[12:46:28]  do exp {
+  start:
+	./runners/start/0000_record_kernel_version.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/test/01
+	./runners/start/0001_sync_drop_caches.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/test/01
+  main:
+	./runners/main/run_workload_damon.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/test/01
+  back:
+	./runners/back/0001_memfree_stat.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/test/01
+	./runners/back/0002_pswpin_stat.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/test/01
+	./runners/back/0003_pswpout_stat.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/test/01
+	./runners/back/0004_memfp.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/test/01
+	./runners/back/0005_schemes_stat.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/test/01
+	./runners/back/0006_thp_stat.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/test/01
+	./runners/back/0007_kdamond_cpu_util.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/test/01
+	./runners/back/0008_mem_additional_stat.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/test/01
+	./runners/back/0009_ttmo.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/test/01
+	./runners/back/0010_mempsi.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/test/01
+	./runners/back/0011_lru_stat.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/test/01
+	./runners/back/0012_psi_tuning.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/test/01
+	./runners/back/0013_lru_tuning.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/test/01
+  end:
+	./runners/end/0001_dmesg.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/test/01
+	chown -R root:root /home/shared/swap_profiling/damon-tests/perf/results
+  check:
+
+}
+[12:48:43]  ./runners/main/run_workload_damon.sh /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/test/01 (93444) terminated
+[12:48:43]  terminate tasks of exp {
+  start:
+	./runners/start/0000_record_kernel_version.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/test/01
+	./runners/start/0001_sync_drop_caches.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/test/01
+  main:
+	./runners/main/run_workload_damon.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/test/01
+  back:
+	./runners/back/0001_memfree_stat.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/test/01
+	./runners/back/0002_pswpin_stat.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/test/01
+	./runners/back/0003_pswpout_stat.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/test/01
+	./runners/back/0004_memfp.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/test/01
+	./runners/back/0005_schemes_stat.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/test/01
+	./runners/back/0006_thp_stat.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/test/01
+	./runners/back/0007_kdamond_cpu_util.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/test/01
+	./runners/back/0008_mem_additional_stat.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/test/01
+	./runners/back/0009_ttmo.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/test/01
+	./runners/back/0010_mempsi.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/test/01
+	./runners/back/0011_lru_stat.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/test/01
+	./runners/back/0012_psi_tuning.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/test/01
+	./runners/back/0013_lru_tuning.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/test/01
+  end:
+	./runners/end/0001_dmesg.sh \
+		 /home/shared/swap_profiling/damon-tests/perf/results/./parsec3/blackscholes/test/01
+	chown -R root:root /home/shared/swap_profiling/damon-tests/perf/results
+  check:
+
+}
+[12:48:43]  kill background procs
+[12:48:43]  childs are not identical. get childs again
+tests ran from Mon Apr 22 12:44:23 UTC 2024 to Mon Apr 22 12:48:49 UTC 2024

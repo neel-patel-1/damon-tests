@@ -4,7 +4,7 @@
 RAW_ODIR=$1
 work_category=$(basename $(dirname $(dirname $(dirname $RAW_ODIR))))
 
-if [ "$work_category" == "parsec3" ] || [ "$work_category" == "splash2x" ]
+if [ "$work_category" == "parsec3" ] || [ "$work_category" == "splash2x" ] || [ "$work_category" == "masim" ]
 then
 	# input is in format of: 'real    0m50.592s'
 	runtime=$(grep -e '^real' $1/commlog | sed 's/^real//' | \

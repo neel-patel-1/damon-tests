@@ -13,6 +13,9 @@ then
 elif [ "$work_category" = "mysql" ]
 then
 	work="mysqld"
+elif [ "$work_category" = "masim" ]
+then
+	work="masim"
 fi
 
 while true;
