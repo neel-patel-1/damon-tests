@@ -19,6 +19,7 @@ ODIR=$1
 repos_dir="$(dirname "$0")/../../../../"
 PARSEC_BENCHMARK="$repos_dir/parsec-benchmark"
 SILO_DBTEST="$repos_dir/silo/out-perf.masstree/benchmarks/dbtest"
+MASIM="$repos_dir/masim/masim"
 DAMO="$repos_dir/damo/damo"
 LBX="$repos_dir/lazybox"
 scheme=""
@@ -48,7 +49,7 @@ then
 	RUN_CMD="sleep \"$timeout\""
 elif [ "$work_category" = "masim" ]
 then
-    RUN_CMD="{ time bash -c \" cd ./runners/main/../../../..//masim && ./masim ./configs/$work.cfg\" ; } 2>&1"
+    RUN_CMD="{ time bash -c \" $MASIM  ./masim_patterns/$work.cfg\" ; } 2>&1"
     
 else
 	echo "Unsupported work category $work_category"
