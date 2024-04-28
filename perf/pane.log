@@ -1,0 +1,1856 @@
+wait for kdamond run
+Press Ctrl+C to stop
+Couldn't synthesize bpf events.
+wait for kdamond run
+monitor kdamond (319905)
+^C[run_exps] received signal 2
+[14:43:18]  terminate tasks of exp {
+  start:
+        ./runners/start/0000_record_kernel_version.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/start/0001_sync_drop_caches.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/start/0002_numa_hetero_mem.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+  main:
+        ./runners/main/run_workload_damon.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+  back:
+        ./runners/back/0001_memfree_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0002_pswpin_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0003_pswpout_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0004_memfp.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0005_schemes_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0006_thp_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0007_kdamond_cpu_util.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0008_mem_additional_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0009_ttmo.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0010_mempsi.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0011_lru_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0012_psi_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0013_lru_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0014_damo_record.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+  end:
+        ./runners/end/0001_dmesg.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        chown -R root:root /home/shared/damon-tests/perf/results
+  check:
+
+}
+
+signal 2 received
+[ perf record: Woken up 1 times to write data ]
+/usr/lib/python3.10/subprocess.py:961: RuntimeWarning: line buffering (buffering=1) isn't supported i
+n binary mode, the default buffer size will be used
+  self.stdout = io.open(c2pread, 'rb', bufsize)
+^C[run_exps] received signal 2
+[14:43:19]  terminate tasks of exp {
+  start:
+        ./runners/start/0000_record_kernel_version.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/start/0001_sync_drop_caches.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/start/0002_numa_hetero_mem.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+  main:
+        ./runners/main/run_workload_damon.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+  back:
+        ./runners/back/0001_memfree_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0002_pswpin_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0003_pswpout_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0004_memfp.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0005_schemes_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0006_thp_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0007_kdamond_cpu_util.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0008_mem_additional_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0009_ttmo.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0010_mempsi.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0011_lru_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0012_psi_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0013_lru_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0014_damo_record.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+  end:
+        ./runners/end/0001_dmesg.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        chown -R root:root /home/shared/damon-tests/perf/results
+  check:
+
+}
+^C[run_exps] received signal 2
+[14:43:19]  terminate tasks of exp {
+  start:
+        ./runners/start/0000_record_kernel_version.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/start/0001_sync_drop_caches.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/start/0002_numa_hetero_mem.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+  main:
+        ./runners/main/run_workload_damon.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+  back:
+        ./runners/back/0001_memfree_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0002_pswpin_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0003_pswpout_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0004_memfp.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0005_schemes_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0006_thp_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0007_kdamond_cpu_util.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0008_mem_additional_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0009_ttmo.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0010_mempsi.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0011_lru_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0012_psi_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0013_lru_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0014_damo_record.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+  end:
+        ./runners/end/0001_dmesg.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        chown -R root:root /home/shared/damon-tests/perf/results
+  check:
+
+}
+^C[run_exps] received signal 2
+[14:43:20]  terminate tasks of exp {
+  start:
+        ./runners/start/0000_record_kernel_version.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/start/0001_sync_drop_caches.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/start/0002_numa_hetero_mem.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+  main:
+        ./runners/main/run_workload_damon.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+  back:
+        ./runners/back/0001_memfree_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0002_pswpin_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0003_pswpout_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0004_memfp.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0005_schemes_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0006_thp_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0007_kdamond_cpu_util.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0008_mem_additional_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0009_ttmo.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0010_mempsi.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0011_lru_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0012_psi_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0013_lru_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0014_damo_record.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+  end:
+        ./runners/end/0001_dmesg.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        chown -R root:root /home/shared/damon-tests/perf/results
+  check:
+
+}
+^C[run_exps] received signal 2
+[14:43:20]  terminate tasks of exp {
+  start:
+        ./runners/start/0000_record_kernel_version.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/start/0001_sync_drop_caches.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/start/0002_numa_hetero_mem.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+  main:
+        ./runners/main/run_workload_damon.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+  back:
+        ./runners/back/0001_memfree_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0002_pswpin_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0003_pswpout_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0004_memfp.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0005_schemes_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0006_thp_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0007_kdamond_cpu_util.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0008_mem_additional_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0009_ttmo.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0010_mempsi.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0011_lru_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0012_psi_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0013_lru_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0014_damo_record.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+  end:
+        ./runners/end/0001_dmesg.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        chown -R root:root /home/shared/damon-tests/perf/results
+  check:
+
+}
+^C[run_exps] received signal 2
+[14:43:21]  terminate tasks of exp {
+  start:
+        ./runners/start/0000_record_kernel_version.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/start/0001_sync_drop_caches.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/start/0002_numa_hetero_mem.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+  main:
+        ./runners/main/run_workload_damon.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+  back:
+        ./runners/back/0001_memfree_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0002_pswpin_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0003_pswpout_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0004_memfp.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0005_schemes_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0006_thp_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0007_kdamond_cpu_util.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0008_mem_additional_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0009_ttmo.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0010_mempsi.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0011_lru_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0012_psi_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0013_lru_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0014_damo_record.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+  end:
+        ./runners/end/0001_dmesg.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        chown -R root:root /home/shared/damon-tests/perf/results
+  check:
+
+}
+^C[run_exps] received signal 2
+[14:43:22]  terminate tasks of exp {
+  start:
+        ./runners/start/0000_record_kernel_version.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/start/0001_sync_drop_caches.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/start/0002_numa_hetero_mem.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+  main:
+        ./runners/main/run_workload_damon.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+  back:
+        ./runners/back/0001_memfree_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0002_pswpin_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0003_pswpout_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0004_memfp.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0005_schemes_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0006_thp_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0007_kdamond_cpu_util.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0008_mem_additional_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0009_ttmo.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0010_mempsi.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0011_lru_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0012_psi_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0013_lru_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0014_damo_record.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+  end:
+        ./runners/end/0001_dmesg.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        chown -R root:root /home/shared/damon-tests/perf/results
+  check:
+
+}
+[ perf record: Captured and wrote 1.807 MB damon.data (4925 samples) ]
+
+signal 2 received
+
+signal 2 received
+sudo: unable to execute /usr/bin/timeout: Broken pipe
+^C[run_exps] received signal 2
+[14:43:23]  terminate tasks of exp {
+  start:
+        ./runners/start/0000_record_kernel_version.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/start/0001_sync_drop_caches.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/start/0002_numa_hetero_mem.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+  main:
+        ./runners/main/run_workload_damon.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+  back:
+        ./runners/back/0001_memfree_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0002_pswpin_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0003_pswpout_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0004_memfp.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0005_schemes_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0006_thp_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0007_kdamond_cpu_util.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0008_mem_additional_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0009_ttmo.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0010_mempsi.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0011_lru_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0012_psi_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0013_lru_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        ./runners/back/0014_damo_record.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+  end:
+        ./runners/end/0001_dmesg.sh \
+                 /home/shared/damon-tests/perf/results/./masim/stairs/prcl/01
+        chown -R root:root /home/shared/damon-tests/perf/results
+  check:
+
+}
+[14:43:23]  kill background procs
+
+real    1m45.605s
+user    0m0.074s
+sys     0m0.152s
+
+real    1m45.613s
+user    0m0.078s
+sys     0m0.156s
+tests ran from Sat Apr 27 14:41:38 UTC 2024 to Sat Apr 27 14:43:23 UTC 2024
+n869p538@ubuntu:perf$ ^C
+n869p538@ubuntu:perf$ ^C
+n869p538@ubuntu:perf$ ^C
+n869p538@ubuntu:perf$ ^C
+n869p538@ubuntu:perf$ ^C
+n869p538@ubuntu:perf$ ls *.sh
+_mk_visual_report.sh                full_once_config_pdarc_auto.sh       remote_full_runs.sh
+_plot_numbers.sh                    full_run.sh                          remote_full_runs_check.sh
+_pr_metrics.sh                      masim_config.sh                      remote_setup.sh
+_pr_overheads.sh                    migrate_run.sh                       run.sh
+_pr_report.sh                       migrate_tests_config.sh              setup.sh
+_summary_results.sh                 mk_reports.sh                        single_config.sh
+aggregate_results_mk_reports.sh     mk_visual_report.sh                  single_numa_masim_config.sh
+fetch_remote_results_mk_reports.sh  parsec_black_scholes_prcl_config.sh  single_run.sh
+full_config.sh                      post.sh                              test_config.sh
+full_once_config.sh                 quick_config.sh
+n869p538@ubuntu:perf$ ^Cdo CFG=migrate_tests_config.sh ./full_run.sh
+n869p538@ubuntu:perf$ cat masim_config.sh
+n869p538@ubuntu:perf$ rm -f masim_config.sh
+n869p538@ubuntu:perf$ chmod +x migrate_run.sh
+n869p538@ubuntu:perf$ sudo ./migrate_run.sh
+1 iter of ./masim/quick_test/default_numa
+[14:44:31]  do exp {
+  start:
+        ./runners/start/0000_record_kernel_version.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/start/0001_sync_drop_caches.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/start/0002_numa_hetero_mem.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+  main:
+        ./runners/main/run_workload_damon.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+  back:
+        ./runners/back/0001_memfree_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0002_pswpin_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0003_pswpout_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0004_memfp.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0005_schemes_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0006_thp_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0007_kdamond_cpu_util.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0008_mem_additional_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0009_ttmo.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0010_mempsi.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0011_lru_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0012_psi_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0013_lru_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0014_damo_record.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+  end:
+        ./runners/end/0001_dmesg.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        chown -R root:root /home/shared/damon-tests/perf/results
+  check:
+
+}
+/bin/bash: line 1: ./runners/start/0002_numa_hetero_mem.sh: Permission denied
+masim quick_test
+RUN_CMD: { time bash -c " cd ./runners/main/../../../..//masim && ./masim ./configs/quick_test.cfg" ;
+ } 2>&1 | tee /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01/commlog
+Wrong var default_numa
+Terminated
+
+real    0m0.029s
+user    0m0.018s
+sys     0m0.007s
+[14:44:31]  ./runners/main/run_workload_damon.sh /home/shared/damon-tests/perf/results/./masim/quick_
+test/default_numa/01 (321346) terminated
+[14:44:31]  terminate tasks of exp {
+  start:
+        ./runners/start/0000_record_kernel_version.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/start/0001_sync_drop_caches.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/start/0002_numa_hetero_mem.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+  main:
+        ./runners/main/run_workload_damon.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+  back:
+        ./runners/back/0001_memfree_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0002_pswpin_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0003_pswpout_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0004_memfp.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0005_schemes_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0006_thp_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0007_kdamond_cpu_util.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0008_mem_additional_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0009_ttmo.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0010_mempsi.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0011_lru_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0012_psi_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0013_lru_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0014_damo_record.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+  end:
+        ./runners/end/0001_dmesg.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        chown -R root:root /home/shared/damon-tests/perf/results
+  check:
+
+}
+[14:44:31]  kill background procs
+/usr/lib/python3.10/subprocess.py:961: RuntimeWarning: line buffering (buffering=1) isn't supported i
+n binary mode, the default buffer size will be used
+  self.stdout = io.open(c2pread, 'rb', bufsize)
+wait for kdamond run
+wait for kdamond run
+wait for kdamond run
+wait for kdamond run
+1 iter of ./masim/quick_test/migrate
+[14:44:38]  do exp {
+  start:
+        ./runners/start/0000_record_kernel_version.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/start/0001_sync_drop_caches.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/start/0002_numa_hetero_mem.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+  main:
+        ./runners/main/run_workload_damon.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+  back:
+        ./runners/back/0001_memfree_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0002_pswpin_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0003_pswpout_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0004_memfp.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0005_schemes_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0006_thp_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0007_kdamond_cpu_util.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0008_mem_additional_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0009_ttmo.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0010_mempsi.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0011_lru_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0012_psi_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0013_lru_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0014_damo_record.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+  end:
+        ./runners/end/0001_dmesg.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        chown -R root:root /home/shared/damon-tests/perf/results
+  check:
+
+}
+/bin/bash: line 1: ./runners/start/0002_numa_hetero_mem.sh: Permission denied
+masim quick_test
+RUN_CMD: { time bash -c " cd ./runners/main/../../../..//masim && ./masim ./configs/quick_test.cfg" ;
+ } 2>&1 | tee /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01/commlog
+Wrong var migrate
+Terminated
+
+real    0m0.027s
+user    0m0.018s
+sys     0m0.007s
+[14:44:39]  ./runners/main/run_workload_damon.sh /home/shared/damon-tests/perf/results/./masim/quick_
+test/migrate/01 (321628) terminated
+[14:44:39]  terminate tasks of exp {
+  start:
+        ./runners/start/0000_record_kernel_version.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/start/0001_sync_drop_caches.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/start/0002_numa_hetero_mem.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+  main:
+        ./runners/main/run_workload_damon.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+  back:
+        ./runners/back/0001_memfree_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0002_pswpin_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0003_pswpout_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0004_memfp.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0005_schemes_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0006_thp_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0007_kdamond_cpu_util.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0008_mem_additional_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0009_ttmo.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0010_mempsi.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0011_lru_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0012_psi_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0013_lru_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0014_damo_record.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+  end:
+        ./runners/end/0001_dmesg.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        chown -R root:root /home/shared/damon-tests/perf/results
+  check:
+
+}
+[14:44:39]  kill background procs
+/usr/lib/python3.10/subprocess.py:961: RuntimeWarning: line buffering (buffering=1) isn't supported i
+n binary mode, the default buffer size will be used
+  self.stdout = io.open(c2pread, 'rb', bufsize)
+wait for kdamond run
+wait for kdamond run
+wait for kdamond run
+wait for kdamond run
+
+real    0m15.256s
+user    0m0.067s
+sys     0m0.155s
+
+real    0m15.264s
+user    0m0.069s
+sys     0m0.160s
+tests ran from Sat Apr 27 14:44:30 UTC 2024 to Sat Apr 27 14:44:46 UTC 2024
+n869p538@ubuntu:perf$ ./runners/start/000
+0000_record_kernel_version.sh  0001_sync_drop_caches.sh
+n869p538@ubuntu:perf$ ./runners/start/000
+0000_record_kernel_version.sh  0001_sync_drop_caches.sh
+n869p538@ubuntu:perf$ ./runners/start/000
+0000_record_kernel_version.sh  0001_sync_drop_caches.sh
+n869p538@ubuntu:perf$ ls runners/start/
+0000_record_kernel_version.sh  0002_numa_hetero_mem.sh
+0001_sync_drop_caches.sh       _numa_default_balance.sh
+n869p538@ubuntu:perf$ chmod +x runners/start/*
+n869p538@ubuntu:perf$ sudo ./migrate_run.sh
+1 iter of ./masim/quick_test/default_numa
+[14:45:23]  do exp {
+  start:
+        ./runners/start/0000_record_kernel_version.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/start/0001_sync_drop_caches.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/start/0002_numa_hetero_mem.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+  main:
+        ./runners/main/run_workload_damon.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+  back:
+        ./runners/back/0001_memfree_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0002_pswpin_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0003_pswpout_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0004_memfp.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0005_schemes_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0006_thp_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0007_kdamond_cpu_util.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0008_mem_additional_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0009_ttmo.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0010_mempsi.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0011_lru_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0012_psi_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0013_lru_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0014_damo_record.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+  end:
+        ./runners/end/0001_dmesg.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        chown -R root:root /home/shared/damon-tests/perf/results
+  check:
+
+}
+echo 2 > /sys/modules/kernel/numa_balancing
+./runners/start/_numa_default_balance.sh: line 5: /sys/modules/kernel/numa_balancing: No such file or
+ directory
+masim quick_test
+RUN_CMD: { time bash -c " cd ./runners/main/../../../..//masim && ./masim ./configs/quick_test.cfg" ;
+ } 2>&1 | tee /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01/commlog
+Wrong var default_numa
+Terminated
+
+real    0m0.028s
+user    0m0.019s
+sys     0m0.006s
+[14:45:23]  ./runners/main/run_workload_damon.sh /home/shared/damon-tests/perf/results/./masim/quick_
+test/default_numa/01 (322261) terminated
+[14:45:23]  terminate tasks of exp {
+  start:
+        ./runners/start/0000_record_kernel_version.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/start/0001_sync_drop_caches.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/start/0002_numa_hetero_mem.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+  main:
+        ./runners/main/run_workload_damon.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+  back:
+        ./runners/back/0001_memfree_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0002_pswpin_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0003_pswpout_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0004_memfp.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0005_schemes_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0006_thp_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0007_kdamond_cpu_util.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0008_mem_additional_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0009_ttmo.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0010_mempsi.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0011_lru_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0012_psi_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0013_lru_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0014_damo_record.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+  end:
+        ./runners/end/0001_dmesg.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        chown -R root:root /home/shared/damon-tests/perf/results
+  check:
+
+}
+[14:45:23]  kill background procs
+/usr/lib/python3.10/subprocess.py:961: RuntimeWarning: line buffering (buffering=1) isn't supported i
+n binary mode, the default buffer size will be used
+  self.stdout = io.open(c2pread, 'rb', bufsize)
+wait for kdamond run
+wait for kdamond run
+wait for kdamond run
+wait for kdamond run
+1 iter of ./masim/quick_test/migrate
+[14:45:30]  do exp {
+  start:
+        ./runners/start/0000_record_kernel_version.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/start/0001_sync_drop_caches.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/start/0002_numa_hetero_mem.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+  main:
+        ./runners/main/run_workload_damon.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+  back:
+        ./runners/back/0001_memfree_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0002_pswpin_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0003_pswpout_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0004_memfp.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0005_schemes_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0006_thp_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0007_kdamond_cpu_util.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0008_mem_additional_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0009_ttmo.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0010_mempsi.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0011_lru_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0012_psi_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0013_lru_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0014_damo_record.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+  end:
+        ./runners/end/0001_dmesg.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        chown -R root:root /home/shared/damon-tests/perf/results
+  check:
+
+}
+masim quick_test
+RUN_CMD: { time bash -c " cd ./runners/main/../../../..//masim && ./masim ./configs/quick_test.cfg" ;
+ } 2>&1 | tee /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01/commlog
+Wrong var migrate
+Terminated
+
+real    0m0.030s
+user    0m0.018s
+sys     0m0.007s
+[14:45:31]  ./runners/main/run_workload_damon.sh /home/shared/damon-tests/perf/results/./masim/quick_
+test/migrate/01 (322547) terminated
+[14:45:31]  terminate tasks of exp {
+  start:
+        ./runners/start/0000_record_kernel_version.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/start/0001_sync_drop_caches.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/start/0002_numa_hetero_mem.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+  main:
+        ./runners/main/run_workload_damon.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+  back:
+        ./runners/back/0001_memfree_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0002_pswpin_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0003_pswpout_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0004_memfp.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0005_schemes_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0006_thp_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0007_kdamond_cpu_util.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0008_mem_additional_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0009_ttmo.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0010_mempsi.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0011_lru_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0012_psi_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0013_lru_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0014_damo_record.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+  end:
+        ./runners/end/0001_dmesg.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        chown -R root:root /home/shared/damon-tests/perf/results
+  check:
+
+}
+[14:45:31]  kill background procs
+/usr/lib/python3.10/subprocess.py:961: RuntimeWarning: line buffering (buffering=1) isn't supported i
+n binary mode, the default buffer size will be used
+  self.stdout = io.open(c2pread, 'rb', bufsize)
+wait for kdamond run
+wait for kdamond run
+wait for kdamond run
+wait for kdamond run
+
+real    0m15.526s
+user    0m0.076s
+sys     0m0.156s
+
+real    0m15.534s
+user    0m0.079s
+sys     0m0.160s
+tests ran from Sat Apr 27 14:45:22 UTC 2024 to Sat Apr 27 14:45:38 UTC 2024
+n869p538@ubuntu:perf$ sudo ./migrate_run.sh
+1 iter of ./masim/quick_test/default_numa
+[14:47:06]  do exp {
+  start:
+        ./runners/start/0000_record_kernel_version.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/start/0001_sync_drop_caches.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/start/0002_numa_hetero_mem.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+  main:
+        ./runners/main/run_workload_damon.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+  back:
+        ./runners/back/0001_memfree_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0002_pswpin_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0003_pswpout_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0004_memfp.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0005_schemes_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0006_thp_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0007_kdamond_cpu_util.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0008_mem_additional_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0009_ttmo.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0010_mempsi.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0011_lru_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0012_psi_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0013_lru_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0014_damo_record.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+  end:
+        ./runners/end/0001_dmesg.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        chown -R root:root /home/shared/damon-tests/perf/results
+  check:
+
+}
+echo 2 > /sys/modules/kernel/numa_balancing
+./runners/start/_numa_default_balance.sh: line 5: /sys/modules/kernel/numa_balancing: No such file or
+ directory
+masim quick_test
+RUN_CMD: { time bash -c " cd ./runners/main/../../../..//masim && ./masim ./configs/quick_test.cfg" ;
+ } 2>&1 | tee /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01/commlog
+Wrong var default_numa
+searched in /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01/../../../../../.
+./perf//schemes
+Terminated
+
+real    0m0.033s
+user    0m0.023s
+sys     0m0.006s
+[14:47:07]  ./runners/main/run_workload_damon.sh /home/shared/damon-tests/perf/results/./masim/quick_
+test/default_numa/01 (322851) terminated
+[14:47:07]  terminate tasks of exp {
+  start:
+        ./runners/start/0000_record_kernel_version.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/start/0001_sync_drop_caches.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/start/0002_numa_hetero_mem.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+  main:
+        ./runners/main/run_workload_damon.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+  back:
+        ./runners/back/0001_memfree_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0002_pswpin_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0003_pswpout_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0004_memfp.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0005_schemes_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0006_thp_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0007_kdamond_cpu_util.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0008_mem_additional_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0009_ttmo.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0010_mempsi.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0011_lru_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0012_psi_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0013_lru_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0014_damo_record.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+  end:
+        ./runners/end/0001_dmesg.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        chown -R root:root /home/shared/damon-tests/perf/results
+  check:
+
+}
+[14:47:07]  kill background procs
+/usr/lib/python3.10/subprocess.py:961: RuntimeWarning: line buffering (buffering=1) isn't supported i
+n binary mode, the default buffer size will be used
+  self.stdout = io.open(c2pread, 'rb', bufsize)
+wait for kdamond run
+wait for kdamond run
+wait for kdamond run
+wait for kdamond run
+1 iter of ./masim/quick_test/migrate
+[14:47:14]  do exp {
+  start:
+        ./runners/start/0000_record_kernel_version.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/start/0001_sync_drop_caches.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/start/0002_numa_hetero_mem.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+  main:
+        ./runners/main/run_workload_damon.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+  back:
+        ./runners/back/0001_memfree_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0002_pswpin_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0003_pswpout_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0004_memfp.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0005_schemes_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0006_thp_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0007_kdamond_cpu_util.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0008_mem_additional_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0009_ttmo.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0010_mempsi.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0011_lru_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0012_psi_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0013_lru_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0014_damo_record.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+  end:
+        ./runners/end/0001_dmesg.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        chown -R root:root /home/shared/damon-tests/perf/results
+  check:
+
+}
+masim quick_test
+RUN_CMD: { time bash -c " cd ./runners/main/../../../..//masim && ./masim ./configs/quick_test.cfg" ;
+ } 2>&1 | tee /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01/commlog
+Wrong var migrate
+searched in /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01/../../../../../../per
+f//schemes
+Terminated
+
+real    0m0.027s
+user    0m0.015s
+sys     0m0.008s
+[14:47:14]  ./runners/main/run_workload_damon.sh /home/shared/damon-tests/perf/results/./masim/quick_
+test/migrate/01 (323131) terminated
+[14:47:14]  terminate tasks of exp {
+  start:
+        ./runners/start/0000_record_kernel_version.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/start/0001_sync_drop_caches.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/start/0002_numa_hetero_mem.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+  main:
+        ./runners/main/run_workload_damon.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+  back:
+        ./runners/back/0001_memfree_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0002_pswpin_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0003_pswpout_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0004_memfp.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0005_schemes_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0006_thp_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0007_kdamond_cpu_util.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0008_mem_additional_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0009_ttmo.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0010_mempsi.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0011_lru_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0012_psi_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0013_lru_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0014_damo_record.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+  end:
+        ./runners/end/0001_dmesg.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        chown -R root:root /home/shared/damon-tests/perf/results
+  check:
+
+}
+[14:47:14]  kill background procs
+/usr/lib/python3.10/subprocess.py:961: RuntimeWarning: line buffering (buffering=1) isn't supported i
+n binary mode, the default buffer size will be used
+  self.stdout = io.open(c2pread, 'rb', bufsize)
+wait for kdamond run
+wait for kdamond run
+wait for kdamond run
+wait for kdamond run
+
+real    0m15.513s
+user    0m0.065s
+sys     0m0.167s
+
+real    0m15.521s
+user    0m0.067s
+sys     0m0.172s
+tests ran from Sat Apr 27 14:47:06 UTC 2024 to Sat Apr 27 14:47:21 UTC 2024
+n869p538@ubuntu:perf$ sudo ./migrate_run.sh
+1 iter of ./masim/quick_test/default_numa
+[14:50:48]  do exp {
+  start:
+        ./runners/start/0000_record_kernel_version.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/start/0001_sync_drop_caches.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/start/0002_numa_hetero_mem.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+  main:
+        ./runners/main/run_workload_damon.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+  back:
+        ./runners/back/0001_memfree_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0002_pswpin_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0003_pswpout_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0004_memfp.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0005_schemes_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0006_thp_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0007_kdamond_cpu_util.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0008_mem_additional_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0009_ttmo.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0010_mempsi.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0011_lru_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0012_psi_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0013_lru_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0014_damo_record.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+  end:
+        ./runners/end/0001_dmesg.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        chown -R root:root /home/shared/damon-tests/perf/results
+  check:
+
+}
+echo 2 > /sys/modules/kernel/numa_balancing
+./runners/start/_numa_default_balance.sh: line 5: /sys/modules/kernel/numa_balancing: No such file or
+ directory
+masim quick_test
+RUN_CMD: { time bash -c " cd ./runners/main/../../../..//masim && ./masim ./configs/quick_test.cfg" ;
+ } 2>&1 | tee /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01/commlog
+example phase 1:                      107479 accesses/msec, 250 msecs run
+
+real    0m0.392s
+user    0m0.279s
+sys     0m0.009s
+[14:50:49]  ./runners/main/run_workload_damon.sh /home/shared/damon-tests/perf/results/./masim/quick_
+test/default_numa/01 (323759) terminated
+[14:50:49]  terminate tasks of exp {
+  start:
+        ./runners/start/0000_record_kernel_version.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/start/0001_sync_drop_caches.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/start/0002_numa_hetero_mem.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+  main:
+        ./runners/main/run_workload_damon.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+  back:
+        ./runners/back/0001_memfree_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0002_pswpin_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0003_pswpout_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0004_memfp.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0005_schemes_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0006_thp_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0007_kdamond_cpu_util.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0008_mem_additional_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0009_ttmo.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0010_mempsi.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0011_lru_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0012_psi_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0013_lru_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0014_damo_record.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+  end:
+        ./runners/end/0001_dmesg.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        chown -R root:root /home/shared/damon-tests/perf/results
+  check:
+
+}
+[14:50:49]  kill background procs
+/usr/lib/python3.10/subprocess.py:961: RuntimeWarning: line buffering (buffering=1) isn't supported i
+n binary mode, the default buffer size will be used
+  self.stdout = io.open(c2pread, 'rb', bufsize)
+wait for kdamond run
+wait for kdamond run
+wait for kdamond run
+wait for kdamond run
+wait for kdamond run
+[14:50:53]  childs are not identical. get childs again
+1 iter of ./masim/quick_test/migrate
+[14:50:56]  do exp {
+  start:
+        ./runners/start/0000_record_kernel_version.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/start/0001_sync_drop_caches.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/start/0002_numa_hetero_mem.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+  main:
+        ./runners/main/run_workload_damon.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+  back:
+        ./runners/back/0001_memfree_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0002_pswpin_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0003_pswpout_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0004_memfp.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0005_schemes_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0006_thp_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0007_kdamond_cpu_util.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0008_mem_additional_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0009_ttmo.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0010_mempsi.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0011_lru_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0012_psi_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0013_lru_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0014_damo_record.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+  end:
+        ./runners/end/0001_dmesg.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        chown -R root:root /home/shared/damon-tests/perf/results
+  check:
+
+}
+masim quick_test
+RUN_CMD: { time bash -c " cd ./runners/main/../../../..//masim && ./masim ./configs/quick_test.cfg" ;
+ } 2>&1 | tee /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01/commlog
+Wrong var migrate
+searched in /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01/../../../../../../per
+f//schemes
+Terminated
+
+real    0m0.028s
+user    0m0.016s
+sys     0m0.008s
+[14:50:57]  ./runners/main/run_workload_damon.sh /home/shared/damon-tests/perf/results/./masim/quick_
+test/migrate/01 (324057) terminated
+[14:50:57]  terminate tasks of exp {
+  start:
+        ./runners/start/0000_record_kernel_version.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/start/0001_sync_drop_caches.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/start/0002_numa_hetero_mem.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+  main:
+        ./runners/main/run_workload_damon.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+  back:
+        ./runners/back/0001_memfree_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0002_pswpin_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0003_pswpout_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0004_memfp.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0005_schemes_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0006_thp_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0007_kdamond_cpu_util.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0008_mem_additional_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0009_ttmo.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0010_mempsi.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0011_lru_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0012_psi_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0013_lru_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        ./runners/back/0014_damo_record.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+  end:
+        ./runners/end/0001_dmesg.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/migrate/01
+        chown -R root:root /home/shared/damon-tests/perf/results
+  check:
+
+}
+[14:50:57]  kill background procs
+/usr/lib/python3.10/subprocess.py:961: RuntimeWarning: line buffering (buffering=1) isn't supported i
+n binary mode, the default buffer size will be used
+  self.stdout = io.open(c2pread, 'rb', bufsize)
+wait for kdamond run
+wait for kdamond run
+wait for kdamond run
+wait for kdamond run
+
+real    0m16.046s
+user    0m0.062s
+sys     0m0.164s
+
+real    0m16.055s
+user    0m0.065s
+sys     0m0.169s
+tests ran from Sat Apr 27 14:50:48 UTC 2024 to Sat Apr 27 14:51:04 UTC 2024
+n869p538@ubuntu:perf$ sudo ./migrate_run.sh
+1 iter of ./masim/quick_test/default_numa
+[14:52:50]  do exp {
+  start:
+        ./runners/start/0000_record_kernel_version.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/start/0001_sync_drop_caches.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/start/0002_numa_hetero_mem.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+  main:
+        ./runners/main/run_workload_damon.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+  back:
+        ./runners/back/0001_memfree_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0002_pswpin_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0003_pswpout_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0004_memfp.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0005_schemes_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0006_thp_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0007_kdamond_cpu_util.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0008_mem_additional_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0009_ttmo.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0010_mempsi.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0011_lru_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0012_psi_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0013_lru_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0014_damo_record.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+  end:
+        ./runners/end/0001_dmesg.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        chown -R root:root /home/shared/damon-tests/perf/results
+  check:
+
+}
+echo 2 > /sys/modules/kernel/numa_balancing
+./runners/start/_numa_default_balance.sh: line 5: /sys/modules/kernel/numa_balancing: No such file or
+ directory
+masim quick_test
+RUN_CMD: { time bash -c " cd ./runners/main/../../../..//masim && ./masim ./configs/quick_test.cfg" ;
+ } 2>&1 | tee /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01/commlog
+wait for kdamond run
+example phase 1:                      111823 accesses/msec, 1001 msecs run
+
+real    0m1.145s
+user    0m1.032s
+sys     0m0.009s
+[14:52:51]  ./runners/main/run_workload_damon.sh /home/shared/damon-tests/perf/results/./masim/quick_
+test/default_numa/01 (324513) terminated
+[14:52:51]  terminate tasks of exp {
+  start:
+        ./runners/start/0000_record_kernel_version.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/start/0001_sync_drop_caches.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/start/0002_numa_hetero_mem.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+  main:
+        ./runners/main/run_workload_damon.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+  back:
+        ./runners/back/0001_memfree_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0002_pswpin_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0003_pswpout_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0004_memfp.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0005_schemes_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0006_thp_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0007_kdamond_cpu_util.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0008_mem_additional_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0009_ttmo.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0010_mempsi.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0011_lru_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0012_psi_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0013_lru_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0014_damo_record.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+  end:
+        ./runners/end/0001_dmesg.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        chown -R root:root /home/shared/damon-tests/perf/results
+  check:
+
+}
+[14:52:51]  kill background procs
+/usr/lib/python3.10/subprocess.py:961: RuntimeWarning: line buffering (buffering=1) isn't supported i
+n binary mode, the default buffer size will be used
+  self.stdout = io.open(c2pread, 'rb', bufsize)
+wait for kdamond run
+wait for kdamond run
+wait for kdamond run
+wait for kdamond run
+
+real    0m8.600s
+user    0m0.036s
+sys     0m0.081s
+
+real    0m8.608s
+user    0m0.039s
+sys     0m0.086s
+tests ran from Sat Apr 27 14:52:50 UTC 2024 to Sat Apr 27 14:52:58 UTC 2024
+n869p538@ubuntu:perf$ ls results/masim/quick_test/default_numa/01/
+active_anon_mem  dmesg              kdamond_cpu_usage  memfree        psi_mem  swapcached
+active_file_mem  inactive_anon_mem  kernel_version     nr_free_pages  pswpin   thpstat
+active_mem       inactive_file_mem  memavail           pgfaults       pswpout
+commlog          inactive_mem       memfps             pgmajfaults    schemes
+n869p538@ubuntu:perf$ cat results/masim/quick_test/default_numa/01/commlog
+example phase 1:                      111823 accesses/msec, 1001 msecs run
+
+real    0m1.145s
+user    0m1.032s
+sys     0m0.009s
+n869p538@ubuntu:perf$ cat results/masim/quick_test/default_numa/rss
+cat: results/masim/quick_test/default_numa/rss: No such file or directory
+n869p538@ubuntu:perf$ cat results/masim/quick_test/default_numa/01/
+active_anon_mem    inactive_anon_mem  memavail           pgmajfaults        swapcached
+active_file_mem    inactive_file_mem  memfps             psi_mem            thpstat
+active_mem         inactive_mem       memfree            pswpin
+commlog            kdamond_cpu_usage  nr_free_pages      pswpout
+dmesg              kernel_version     pgfaults           schemes
+n869p538@ubuntu:perf$ cat results/masim/quick_test/default_numa/01/
+active_anon_mem    inactive_anon_mem  memavail           pgmajfaults        swapcached
+active_file_mem    inactive_file_mem  memfps             psi_mem            thpstat
+active_mem         inactive_mem       memfree            pswpin
+commlog            kdamond_cpu_usage  nr_free_pages      pswpout
+dmesg              kernel_version     pgfaults           schemes
+n869p538@ubuntu:perf$ cat results/masim/quick_test/default_numa/01/mem
+memavail  memfps    memfree
+n869p538@ubuntu:perf$ cat results/masim/quick_test/default_numa/01/memfps
+  9712  5504  324586 ./masim ./configs/quick_test.cfg
+n869p538@ubuntu:perf$ sudo ./migrate_run.sh
+1 iter of ./masim/quick_test/default_numa
+[14:55:38]  do exp {
+  start:
+        ./runners/start/0000_record_kernel_version.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/start/0001_sync_drop_caches.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/start/0002_numa_hetero_mem.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+  main:
+        ./runners/main/run_workload_damon.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+  back:
+        ./runners/back/0001_memfree_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0002_pswpin_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0003_pswpout_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0004_memfp.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0005_schemes_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0006_thp_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0007_kdamond_cpu_util.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0008_mem_additional_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0009_ttmo.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0010_mempsi.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0011_lru_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0012_psi_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0013_lru_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0014_damo_record.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+  end:
+        ./runners/end/0001_dmesg.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        chown -R root:root /home/shared/damon-tests/perf/results
+  check:
+
+}
+echo 2 > /sys/modules/kernel/numa_balancing
+./runners/start/_numa_default_balance.sh: line 5: /sys/modules/kernel/numa_balancing: No such file or
+ directory
+masim quick_test
+RUN_CMD: { time bash -c " cd ./runners/main/../../../..//masim && ./masim ./configs/quick_test.cfg" ;
+ } 2>&1 | tee /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01/commlog
+wait for kdamond run
+example phase 1:                       93622 accesses/msec, 1001 msecs run
+
+real    0m1.147s
+user    0m1.026s
+sys     0m0.017s
+[14:55:40]  ./runners/main/run_workload_damon.sh /home/shared/damon-tests/perf/results/./masim/quick_
+test/default_numa/01 (325214) terminated
+[14:55:40]  terminate tasks of exp {
+  start:
+        ./runners/start/0000_record_kernel_version.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/start/0001_sync_drop_caches.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/start/0002_numa_hetero_mem.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+  main:
+        ./runners/main/run_workload_damon.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+  back:
+        ./runners/back/0001_memfree_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0002_pswpin_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0003_pswpout_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0004_memfp.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0005_schemes_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0006_thp_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0007_kdamond_cpu_util.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0008_mem_additional_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0009_ttmo.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0010_mempsi.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0011_lru_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0012_psi_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0013_lru_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0014_damo_record.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+  end:
+        ./runners/end/0001_dmesg.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        chown -R root:root /home/shared/damon-tests/perf/results
+  check:
+
+}
+[14:55:40]  kill background procs
+/usr/lib/python3.10/subprocess.py:961: RuntimeWarning: line buffering (buffering=1) isn't supported i
+n binary mode, the default buffer size will be used
+  self.stdout = io.open(c2pread, 'rb', bufsize)
+wait for kdamond run
+wait for kdamond run
+wait for kdamond run
+wait for kdamond run
+
+real    0m8.806s
+user    0m0.035s
+sys     0m0.087s
+
+real    0m8.814s
+user    0m0.038s
+sys     0m0.093s
+tests ran from Sat Apr 27 14:55:38 UTC 2024 to Sat Apr 27 14:55:47 UTC 2024
+n869p538@ubuntu:perf$ cat results/masim/quick_test/default_numa/01/memfps
+ 19480 15232  325281 ./masim ./configs/quick_test.cfg
+n869p538@ubuntu:perf$ sudo ./migrate_run.sh
+1 iter of ./masim/quick_test/default_numa
+[14:56:41]  do exp {
+  start:
+        ./runners/start/0000_record_kernel_version.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/start/0001_sync_drop_caches.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/start/0002_numa_hetero_mem.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+  main:
+        ./runners/main/run_workload_damon.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+  back:
+        ./runners/back/0001_memfree_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0002_pswpin_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0003_pswpout_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0004_memfp.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0005_schemes_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0006_thp_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0007_kdamond_cpu_util.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0008_mem_additional_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0009_ttmo.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0010_mempsi.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0011_lru_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0012_psi_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0013_lru_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0014_damo_record.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+  end:
+        ./runners/end/0001_dmesg.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        chown -R root:root /home/shared/damon-tests/perf/results
+  check:
+
+}
+echo 2 > /sys/modules/kernel/numa_balancing
+./runners/start/_numa_default_balance.sh: line 5: /sys/modules/kernel/numa_balancing: No such file or
+ directory
+masim quick_test
+RUN_CMD: { time bash -c " cd ./runners/main/../../../..//masim && ./masim ./configs/quick_test.cfg" ;
+ } 2>&1 | tee /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01/commlog
+wait for kdamond run
+example phase 1:                       56435 accesses/msec, 1001 msecs run
+
+real    0m1.146s
+user    0m0.969s
+sys     0m0.074s
+[14:56:43]  ./runners/main/run_workload_damon.sh /home/shared/damon-tests/perf/results/./masim/quick_
+test/default_numa/01 (325544) terminated
+[14:56:43]  terminate tasks of exp {
+  start:
+        ./runners/start/0000_record_kernel_version.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/start/0001_sync_drop_caches.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/start/0002_numa_hetero_mem.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+  main:
+        ./runners/main/run_workload_damon.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+  back:
+        ./runners/back/0001_memfree_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0002_pswpin_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0003_pswpout_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0004_memfp.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0005_schemes_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0006_thp_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0007_kdamond_cpu_util.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0008_mem_additional_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0009_ttmo.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0010_mempsi.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0011_lru_stat.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0012_psi_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0013_lru_tuning.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        ./runners/back/0014_damo_record.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+  end:
+        ./runners/end/0001_dmesg.sh \
+                 /home/shared/damon-tests/perf/results/./masim/quick_test/default_numa/01
+        chown -R root:root /home/shared/damon-tests/perf/results
+  check:
+
+}
+[14:56:43]  kill background procs
+/usr/lib/python3.10/subprocess.py:961: RuntimeWarning: line buffering (buffering=1) isn't supported i
+n binary mode, the default buffer size will be used
+  self.stdout = io.open(c2pread, 'rb', bufsize)
+wait for kdamond run
+wait for kdamond run
+wait for kdamond run
+wait for kdamond run
+
+real    0m8.783s
+user    0m0.033s
+sys     0m0.090s
+
+real    0m8.791s
+user    0m0.036s
+sys     0m0.095s
+tests ran from Sat Apr 27 14:56:41 UTC 2024 to Sat Apr 27 14:56:50 UTC 2024
+n869p538@ubuntu:perf$ cat results/masim/quick_test/default_numa/01/memfps
+107372 103168 325617 ./masim ./configs/quick_test.cfg
+n869p538@ubuntu:perf$ cat results/masim/quick_test/default_numa/01/memfps
+107372 103168 325617 ./masim ./configs/quick_test.cfg
+n869p538@ubuntu:perf$ git^C
+n869p538@ubuntu:perf$ ^C
+n869p538@ubuntu:perf$ git status .
+On branch next
+Your branch is up to date with 'origin/next'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   runners/main/run_workload_damon.sh
+        modified:   runners/start/0002_numa_hetero_mem.sh
+        modified:   runners/start/_numa_default_balance.sh
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .bashrc
+        1
+        damon.data
+        damon.data.old
+        migrate_run.sh
+        migrate_tests_config.sh
+        output.log
+        schemes/migrate.json
+        single_numa_masim_config.sh
+
+no changes added to commit (use "git add" and/or "git commit -a")
+n869p538@ubuntu:perf$ git add runners
+n869p538@ubuntu:perf$ git add migrate_tests_config.sh migrate_run.sh
+n869p538@ubuntu:perf$ touch memmanage

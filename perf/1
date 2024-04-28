@@ -1,0 +1,17 @@
+error: Your local changes to the following files would be overwritten by merge:
+	perf/full_run.sh
+	perf/parsers/commlog.sh
+	perf/run.sh
+	perf/runners/back/0004_memfp.sh
+	perf/runners/main/run_workload_damon.sh
+	perf/setup.sh
+Please commit your changes or stash them before you merge.
+error: The following untracked working tree files would be overwritten by merge:
+	perf/.README.md.swp
+	perf/ERRORS.md
+	perf/output.txt
+	perf/parsec_black_scholes_prcl_config.sh
+	perf/report_prcl_parsec.txt
+	perf/test_config.sh
+Please move or remove them before you merge.
+Aborting
