@@ -56,6 +56,7 @@ printf "\n"
 nr_workloads=0
 for w in $workloads
 do
+	printed_workload=0
 	nr_workloads=$((nr_workloads + 1))
 	orig_d=$ODIR_ROOT/$w/orig/stat/$stat
 	orig_nr=$(cat $orig_d/$metric | awk '{print $2}')
@@ -68,9 +69,10 @@ do
 		overhead=$(float_overhead "$number" "$orig_nr")
 		sums[$var]=$(float_add "${sums[$var]}" "$number")
 
-		if [ "$var" = "rec" ]
+		if [ "$printed_workload" = "0" ]
 		then
 			printf "%s\t%.3f" $w $overhead
+			printed_workload=1
 		else
 			printf "\t%.3f" $overhead
 		fi
