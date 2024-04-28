@@ -129,7 +129,7 @@ then
 		scheme="$schemes_dir/$var.damos"
 	fi
 	echo "apply scheme '$scheme'"
-	sudo timeout "$timeout" "$DAMO" record "$pid" --schemes "$scheme"
+	sudo timeout "$timeout" "$DAMO" schemes "$pid" --schemes "$scheme"
 elif [ "$var" = "prec" ]
 then
 	sudo timeout "$timeout" "$DAMO" record paddr --out "$ODIR/damon.data" &
@@ -160,7 +160,6 @@ then
 	sudo "$DAMO" stop
 else
 	echo "Wrong var $var"
-	echo "searched in $schemes_dir"
 	killall $cmdname
 	exit 1
 fi
