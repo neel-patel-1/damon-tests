@@ -3,6 +3,7 @@
 
 EXPERIMENTS=`dirname $BASH_SOURCE`
 
+masim_configs="stairs"
 masim_configs="$(ls  -1 ./masim_patterns | sed -e 's/\.cfg//g'  | tr -s '\n' ' ')"
 
 workloads=""
@@ -12,7 +13,8 @@ do
 	workloads+="masim/$w "
 done
 
-vars="orig prcl plrus ttmo ethp"
+#vars="orig rec prcl prcl_auto_50 plrus plrus_auto_7000 ttmo thp ethp"
+vars="orig rec prcl plrus ttmo thp ethp"
 
 VARIANTS=""
 
@@ -27,4 +29,3 @@ done
 EXPERIMENTS=$EXPERIMENTS
 VARIANTS=$VARIANTS
 REPEATS=1
-
