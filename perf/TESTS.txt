@@ -1,6 +1,9 @@
 # compare mm schemes on masim patterns
 ```
 sudo ./masim_run.sh
+
+#masim pixel art / pattern generation
+python3 pixels_to_access_config.py shrinking_wss.pixels 5000000 30 shrinking_wss.cfg
 ```
 
 # compare plru with default ttmo
