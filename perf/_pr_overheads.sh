@@ -44,6 +44,7 @@ stat=$1
 metric=$2
 
 declare -A sums
+declare -A overhead_sums
 
 printf $metric'_'$stat
 for var in $vars
@@ -68,6 +69,8 @@ do
 		number=$(cat $d/$metric | awk '{print $2}')
 		overhead=$(float_overhead "$number" "$orig_nr")
 		sums[$var]=$(float_add "${sums[$var]}" "$number")
+		overhead_sums[$var]=$(float_add \
+			"${overhead_sums[$var]}" "$overhead")
 
 		if [ "$printed_workload" = "0" ]
 		then
@@ -95,12 +98,12 @@ then
 fi
 
 printf "average"
-orig_average=$(float_divide "${sums[orig]}" "$nr_workloads")
 for var in $vars
 do
 	if [ "$var" = "orig" ]; then continue; fi
-	average=$(float_divide "${sums[$var]}" "$nr_workloads")
-	overhead=$(float_overhead "$average" "$orig_average")
-	printf "\t%.3f" $overhead
+	number_average=$(float_divide "${sums[$var]}" "$nr_workloads")
+	overhead_average=$(float_divide \
+		"${overhead_sums[$var]}" "$nr_workloads")
+	printf "\t%.3f" $overhead_average
 done
 printf "\n"
