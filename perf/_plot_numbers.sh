@@ -24,6 +24,8 @@ do
 			$PLOT --type clustered_boxes \
 				--xtics_rotate -90 \
 				--ytitle "$metric overhead\n(percent)" \
+				--yrange "[-100:100]" \
+				--xzeroaxis 1  \
 				--font "Times New Roman" \
 				$OUTPUT_IMG
 		if [ $? -ne 0 ]

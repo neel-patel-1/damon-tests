@@ -17,3 +17,8 @@ then
 	runtime=$(awk -v t=$trx_per_sec 'BEGIN {print 1000 * 1000000 / t}')
 	echo "runtime: $runtime" > $2/runtime
 fi
+if [ "$work_category" == "masim" ]
+then
+	acc_per_sec=$( grep accesses $1/commlog | grep -Eo '[0-9]+ accesses/msec' | awk '{sum+= $1} END{print sum/NR}' )	
+	echo "accesses_per_ms: $acc_per_sec" > $2/acc_per_sec
+fi
