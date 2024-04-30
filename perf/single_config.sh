@@ -3,9 +3,9 @@
 
 EXPERIMENTS=`dirname $BASH_SOURCE`
 
-#parsec_workloads="blackscholes bodytrack canneal dedup facesim "
-#parsec_workloads+="fluidanimate freqmine raytrace streamcluster swaptions "
-#parsec_workloads+="vips"
+parsec_workloads="blackscholes bodytrack canneal dedup facesim "
+parsec_workloads+="fluidanimate freqmine raytrace streamcluster swaptions "
+parsec_workloads+="vips"
 #parsec_workloads="blackscholes "
 
 ycsb_configs="2"
