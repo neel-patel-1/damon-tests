@@ -1,3 +1,9 @@
+# show impact of prcl min_age
+```
+sudo CFG=zigzag_comp_config.sh  ./masim_run.sh
+```
+
+
 # compare mm schemes on masim patterns
 ```
 sudo ./masim_run.sh
