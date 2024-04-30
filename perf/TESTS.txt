@@ -1,5 +1,28 @@
+# compare mm schemes on masim patterns
+```
+sudo ./masim_run.sh
+
+#masim pixel art / pattern generation
+python3 pixels_to_access_config.py shrinking_wss.pixels 5000000 30 shrinking_wss.cfg
+```
+
+# compare plru with default ttmo
+```
+n869p538@ubuntu:perf$ sudo ./migrate_run.sh
+```
 
 # compare default numa balancing with damon's migrate_hot and migrate_cold
 ```
 n869p538@ubuntu:perf$ sudo ./migrate_run.sh
+```
+
+# show heat map of a workloads
+```
+n869p538@ubuntu:masim$ sudo ./../damo/damo record "./masim ./configs/stairs.cfg "
+n869p538@ubuntu:parsec-benchmark$ sudo ./../damo/damo record "bash -c \"source env.sh && parsecmgmt -a run -p blackscholes -i native -n 1\""                                                                                     
+```
+
+# all parsec
+```
+qemu-img create -b cloud-img-ubu22-2-12-24.img -f qcow2 cloud-img-parsec.img
 ```
