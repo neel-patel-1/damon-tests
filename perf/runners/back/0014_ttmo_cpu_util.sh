@@ -26,15 +26,23 @@ then
 fi
 
 ttmo_pid=""
+pids=$(pgrep -f '_ex_ttmo.sh')
 
 while [ -z "$ttmo_pid" ] 
 do
 	sleep 1
-	echo "Checking for 0009_ttmo.sh process..."
-	ttmo_pid=$(pidof 0009_ttmo.sh) 
+	echo "Checking for _ttmo.sh process..."
+	ttmo_pid=$(pgrep -f _ex_ttmo.sh) 
 done
 
-echo "0009_ttmo.sh is running with PID: $ttmo_pid"
+for pid in $pids; do
+    if ps -p $pid -o state --no-headers | grep -qv 'Z'; then
+ #       echo "Active PID: $pid"
+	ttmo_pid=$pid
+    fi
+done
+
+#echo "_ex_ttmo.sh is running with PID: $ttmo_pid"
 
 echo "monitor ttmo ($ttmo_pid)"
 stat_file="/proc/$ttmo_pid/stat"

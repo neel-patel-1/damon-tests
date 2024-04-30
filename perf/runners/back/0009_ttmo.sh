@@ -15,4 +15,4 @@ fi
 # The default parameter is too conservative to show change to our test
 # workloads.  we use 3% reclaim_ratio, 1% PSI threshold, and 1 sec reclaim
 # interval for the reason.
-"$bindir/_ttmo.sh" 300 100 1000
+"$bindir/_ex_ttmo.sh" 300 100 1000
