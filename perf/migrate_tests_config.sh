@@ -3,7 +3,7 @@
 
 EXPERIMENTS=`dirname $BASH_SOURCE`
 
-masim_configs="quick_test"
+masim_configs="stairs"
 
 workloads=""
 
@@ -13,6 +13,7 @@ do
 done
 
 vars="default_numa migrate"
+vars="prcl"
 
 VARIANTS=""
 

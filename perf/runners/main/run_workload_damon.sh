@@ -114,7 +114,7 @@ custom_schemes_dir="$schemes_dir/$work_category/$work"
 if [ "$var" = "rec" ]
 then
 	sudo timeout "$timeout" "$DAMO" record "$pid" --out "$ODIR/damon.data"
-elif [ "$var" == "ethp" ] || [[ "$var" == "prcl"* ]] || [[ "$var" == "darc"* ]] || [[ "$var" == "migrate" ]]
+elif [ "$var" == "ethp" ] || [[ "$var" == "prcl"* ]] || [[ "$var" == "darc"* ]] || [[ "$var" == "migrate" ]] || [[ "$var" == "prcl_ethp"* ]] || [[ "$var" == "prcl_ethp_plru"* ]]
 then
 	if [ -f "$custom_schemes_dir/$var.json" ]
 	then
@@ -152,7 +152,7 @@ then
 
 	echo "apply scheme '$scheme'"
 
-	sudo timeout "$timeout" "$DAMO" schemes paddr --schemes "$scheme" &
+	sudo timeout "$timeout" "$DAMO" schemes  paddr --schemes "$scheme" &
 	while [ -d "/proc/$pid" ]
 	do
 		sleep 1

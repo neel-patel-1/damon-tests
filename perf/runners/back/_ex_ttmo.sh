@@ -14,7 +14,6 @@ then
 	echo "Usage: $0 <reclaim ratio (bp)> <psi threshold (bp)> <interval (ms)>"
 	exit 1
 fi
-
 reclaim_ratio_bp=$1
 psi_threshold_bp=$2
 interval_ms=$3

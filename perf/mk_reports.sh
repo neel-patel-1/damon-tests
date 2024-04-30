@@ -21,7 +21,7 @@ $BINDIR/_pr_report.sh | $FMT > $REPORT_DIR/report.txt
 
 echo "_pr_report done"
 
-for metric in runtime kdamond_cpu_util memused.avg rss.avg pgmajfaults psi_mem_some_us
+for metric in runtime kdamond_cpu_util memused.avg rss.avg pgmajfaults psi_mem_some_us ttmo_cpu_util
 do
 	$BINDIR/_summary_results.sh avg $metric | $FMT
 	echo
