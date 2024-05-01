@@ -15,7 +15,7 @@ PLOT=$LBX/gnuplot/plot.py
 
 mkdir -p $ODIR
 
-for metric in runtime kdamond_cpu_util memused.avg rss.avg ttmo_cpu_util
+for metric in runtime kdamond_cpu_util memused.avg rss.avg acc_per_sec pgmajfaults psi_mem_full_us
 do
 	for suffix in pdf png
 	do
