@@ -16,7 +16,7 @@ fi
 odir=$1
 var=$(basename $(dirname "$odir"))
 
-cpu_usage_file=$1/ttmo_cpu_usage
+cpu_usage_file=$1/kdamond_cpu_usage
 rm -f "$cpu_usage_file"
 touch "$cpu_usage_file"
 
