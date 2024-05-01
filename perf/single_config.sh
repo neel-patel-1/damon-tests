@@ -3,12 +3,11 @@
 
 EXPERIMENTS=`dirname $BASH_SOURCE`
 
-#parsec_workloads="blackscholes bodytrack canneal dedup facesim "
-#parsec_workloads+="fluidanimate freqmine raytrace streamcluster swaptions "
-#parsec_workloads+="vips"
-parsec_workloads="blackscholes "
+parsec_workloads="blackscholes bodytrack canneal "
+parsec_workloads+="raytrace streamcluster swaptions"
+#parsec_workloads="blackscholes "
 
-#ycsb_configs="2"
+ycsb_configs="2"
 #masim_configs="stairs"
 
 workloads=""
@@ -27,7 +26,7 @@ do
         workloads+="ycsb/$w "
 done
 
-vars="orig ttmo"
+vars="orig prcl ttmo thp ethp plrus prcl_auto_50 prcl_ethp prcl_ethp_auto_50 prcl_ethp_plru prcl_ethp_plru_auto_50"
 
 VARIANTS=""
 
