@@ -21,30 +21,11 @@ do
     do
         OUTPUT_IMG=$ODIR/$metric.$suffix
 
-        # Default yrange
-        YRANGE="[-100:100]"
-
-        # Adjust yrange based on metric
-        case $metric in
-            "kdamond_cpu_util")
-                YRANGE="[-0.5:1.5]"
-                ;;
-            "memused.avg")
-                YRANGE="[-100:350]"
-                ;;
-            "rss.avg")
-                YRANGE="[-100:50]"
-                ;;
-            "runtime")
-			YRANGE="[-15:20]"
-                ;;
-			"pgmajfaults")
-			YRANGE="[-15:1000000]"
-                ;;
-			"psi_mem_full_us")
-			YRANGE="[-15:12000000]"
-                ;;
-        esac
+		YRANGE="[*<-1:1<*]"
+		YTITLE="$metric overhead\n(percent)"
+		if [ "$metric" = "acc_per_sec" ]; then
+			YTITLE="$metric increase\n(percent)"
+		fi
 
         $BINDIR/_pr_overheads.sh avg $metric | \
             $PLOT --type clustered_boxes \
