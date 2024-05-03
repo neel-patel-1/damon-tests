@@ -83,20 +83,6 @@ do
 	printf "\n"
 done
 
-if [ ! "$metric" = "kdamond_cpu_util" ]
-then
-	printf "total"
-	orig_sum=${sums[orig]}
-	for var in $vars
-	do
-		if [ "$var" = "orig" ]; then continue; fi
-		sum=${sums[$var]}
-		overhead=$(float_overhead "$sum" "$orig_sum")
-		printf "\t%.3f" $overhead
-	done
-	printf "\n"
-fi
-
 printf "average"
 for var in $vars
 do
