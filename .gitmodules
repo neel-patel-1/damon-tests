@@ -1,0 +1,3 @@
+[submodule "lazybox"]
+	path = lazybox
+	url = git@github.com:neel-patel-1/lazybox.git
