@@ -7,7 +7,7 @@ then
 	exit 1
 fi
 
-LBX="$(dirname "$0")/../../../lazybox"
+LBX="$(dirname "$0")/../../lazybox"
 
 ODIR=$1
 SDIR=${@:2}

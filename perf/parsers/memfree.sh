@@ -1,7 +1,7 @@
 #!/bin/bash
 # SPDX-License-Identifier: GPL-2.0
 
-LBX="$(dirname "$0")/../../../lazybox"
+LBX="$(dirname "$0")/../../lazybox"
 
 $LBX/scripts/report/memfree_to_used.py $1/memfree > $2/memused
 
