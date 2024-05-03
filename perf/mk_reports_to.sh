@@ -4,7 +4,7 @@
 LC_NUMERIC="en_US.UTF-8"
 
 BINDIR=`dirname $0`
-FMT="$(dirname "$0")/../../lazybox/scripts/report/fmt_tbl.py --spaces 1 "
+FMT="$(dirname "$0")/../lazybox/scripts/report/fmt_tbl.py --spaces 1 "
 REPORT_DIR=$1
 
 [ $# -lt 1 ] && "echo specify output report directory" && exit -1

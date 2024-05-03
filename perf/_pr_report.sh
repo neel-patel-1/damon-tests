@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: GPL-2.0
 
 BINDIR=`dirname $0`
-LBX="$(dirname "$0")/../../lazybox"
+LBX="$(dirname "$0")/../lazybox"
 
 echo "======="
 echo "Summary"

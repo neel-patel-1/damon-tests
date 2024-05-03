@@ -88,3 +88,8 @@ shows a summary in text form.  It generates a detailed report in text form, and
 in html form in 'report/report.txt' and 'report/html/index.html', respectively.
 The html form report includes simple visualizations of the output, either.  The
 visualizations are also available in 'report/plots/' directory.
+
+To run masim microbenchmarks and specify report output directory using results.
+    $ sudo CFG=masim_patterns_config.sh ./masim_run.sh
+    $ sudo ODIR_ROOT=$PWD/masim_results CFG=masim_patterns_config.sh ./post.sh
+    $ sudo ODIR_ROOT=$PWD/masim_results CFG=masim_patterns_config.sh ./mk_reports_to.sh masim_reports

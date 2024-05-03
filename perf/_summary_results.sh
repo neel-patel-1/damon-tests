@@ -25,7 +25,7 @@ then
 	exit 1
 fi
 
-ODIR_ROOT="results"
+[ -z $ODIR_ROOT ] && ODIR_ROOT="results"
 
 BINDIR=`dirname $0`
 if [ -z "$CFG" ]

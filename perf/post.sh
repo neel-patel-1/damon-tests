@@ -1,7 +1,7 @@
 #!/bin/bash
 # SPDX-License-Identifier: GPL-2.0
 
-LBX="$(dirname "$0")/../../lazybox"
+LBX="$(dirname "$0")/../lazybox"
 BINDIR=`dirname $0`
 
 if [ -z "$CFG" ] || [ ! -f "$CFG" ]
