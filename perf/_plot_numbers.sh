@@ -33,7 +33,7 @@ do
                 --ytitle "$metric overhead\n(percent)" \
                 --yrange "$YRANGE" \
                 --xzeroaxis 1  \
-                --font "Times New Roman,10" \
+                --font "Times New Roman,20" \
                 --size 800,600 \
                 $OUTPUT_IMG
         if [ $? -ne 0 ]
