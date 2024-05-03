@@ -4,6 +4,7 @@
 EXPERIMENTS=`dirname $BASH_SOURCE`
 
 masim_configs="stairs 100mb"
+masim_configs="$(ls  -1 ./masim_patterns | sed -e 's/\.cfg//g'  | tr -s '\n' ' ')"
 
 workloads=""
 
