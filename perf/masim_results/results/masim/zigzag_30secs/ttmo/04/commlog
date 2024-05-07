@@ -1,0 +1,17 @@
+initial phase:	               61813 accesses/msec, 5000 msecs run
+low phase 0:	               65221 accesses/msec, 2500 msecs run
+high phase 0:	               63229 accesses/msec, 2500 msecs run
+low phase 1:	               65195 accesses/msec, 2501 msecs run
+high phase 1:	               63805 accesses/msec, 2500 msecs run
+low phase 2:	               65142 accesses/msec, 2501 msecs run
+high phase 2:	               63648 accesses/msec, 2500 msecs run
+low phase 3:	               64671 accesses/msec, 2501 msecs run
+high phase 3:	               63780 accesses/msec, 2501 msecs run
+low phase 4:	               64959 accesses/msec, 2500 msecs run
+high phase 4:	               63518 accesses/msec, 2501 msecs run
+low phase 5:	               64749 accesses/msec, 2500 msecs run
+high phase 5:	               63413 accesses/msec, 2501 msecs run
+
+real	0m35.208s
+user	0m34.992s
+sys	0m0.110s

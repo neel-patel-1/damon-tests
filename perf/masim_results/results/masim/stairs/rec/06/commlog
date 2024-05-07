@@ -1,0 +1,15 @@
+initial phase:	               63976 accesses/msec, 5001 msecs run
+phase 0:	               64697 accesses/msec, 2500 msecs run
+phase 1:	               63281 accesses/msec, 2500 msecs run
+phase 2:	               65640 accesses/msec, 2500 msecs run
+phase 3:	               64906 accesses/msec, 2500 msecs run
+phase 4:	               67790 accesses/msec, 2500 msecs run
+phase 5:	               65247 accesses/msec, 2501 msecs run
+phase 6:	               62180 accesses/msec, 2500 msecs run
+phase 7:	               63858 accesses/msec, 2500 msecs run
+phase 8:	               66453 accesses/msec, 2501 msecs run
+phase 9:	               65064 accesses/msec, 2500 msecs run
+
+real	0m30.204s
+user	0m30.047s
+sys	0m0.055s

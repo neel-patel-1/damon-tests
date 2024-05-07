@@ -1,0 +1,940 @@
+[    0.000000] Linux version 6.8.0 (n869p538@castor.ittc.ku.edu) (gcc (Ubuntu 11.4.0-2ubuntu1~20.04) 11.4.0, GNU ld (GNU Binutils for Ubuntu) 2.34) #3 SMP PREEMPT_DYNAMIC Sat Apr 27 16:23:48 CDT 2024
+[    0.000000] Command line: root=/dev/sda1 single console=ttyS0 systemd.unit=graphical.target cgroup_no_v1=all
+[    0.000000] BIOS-provided physical RAM map:
+[    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
+[    0.000000] BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000000100000-0x00000000bffdefff] usable
+[    0.000000] BIOS-e820: [mem 0x00000000bffdf000-0x00000000bfffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000feffc000-0x00000000feffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fffc0000-0x00000000ffffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000100000000-0x000000083fffffff] usable
+[    0.000000] NX (Execute Disable) protection: active
+[    0.000000] APIC: Static calls initialized
+[    0.000000] SMBIOS 2.8 present.
+[    0.000000] DMI: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.13.0-1ubuntu1.1 04/01/2014
+[    0.000000] Hypervisor detected: KVM
+[    0.000000] kvm-clock: Using msrs 4b564d01 and 4b564d00
+[    0.000000] kvm-clock: using sched offset of 185486489 cycles
+[    0.000003] clocksource: kvm-clock: mask: 0xffffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
+[    0.000008] tsc: Detected 3092.732 MHz processor
+[    0.000601] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+[    0.000603] e820: remove [mem 0x000a0000-0x000fffff] usable
+[    0.000607] last_pfn = 0x840000 max_arch_pfn = 0x400000000
+[    0.000629] MTRR map: 4 entries (3 fixed + 1 variable; max 19), built from 8 variable MTRRs
+[    0.000632] x86/PAT: PAT not supported by the CPU.
+[    0.000634] x86/PAT: Configuration [0-7]: WB  WT  UC- UC  WB  WT  UC- UC  
+[    0.000669] last_pfn = 0xbffdf max_arch_pfn = 0x400000000
+[    0.006157] found SMP MP-table at [mem 0x000f5bd0-0x000f5bdf]
+[    0.006676] ACPI: Early table checksum verification disabled
+[    0.006689] ACPI: RSDP 0x00000000000F5B90 000014 (v00 BOCHS )
+[    0.006692] ACPI: RSDT 0x00000000BFFE143A 000030 (v01 BOCHS  BXPCRSDT 00000001 BXPC 00000001)
+[    0.006703] ACPI: FACP 0x00000000BFFE12CE 000074 (v01 BOCHS  BXPCFACP 00000001 BXPC 00000001)
+[    0.006709] ACPI: DSDT 0x00000000BFFDFBC0 00170E (v01 BOCHS  BXPCDSDT 00000001 BXPC 00000001)
+[    0.006713] ACPI: FACS 0x00000000BFFDFB80 000040
+[    0.006715] ACPI: APIC 0x00000000BFFE1342 0000C0 (v01 BOCHS  BXPCAPIC 00000001 BXPC 00000001)
+[    0.006718] ACPI: HPET 0x00000000BFFE1402 000038 (v01 BOCHS  BXPCHPET 00000001 BXPC 00000001)
+[    0.006720] ACPI: Reserving FACP table memory at [mem 0xbffe12ce-0xbffe1341]
+[    0.006721] ACPI: Reserving DSDT table memory at [mem 0xbffdfbc0-0xbffe12cd]
+[    0.006721] ACPI: Reserving FACS table memory at [mem 0xbffdfb80-0xbffdfbbf]
+[    0.006722] ACPI: Reserving APIC table memory at [mem 0xbffe1342-0xbffe1401]
+[    0.006723] ACPI: Reserving HPET table memory at [mem 0xbffe1402-0xbffe1439]
+[    0.006891] No NUMA configuration found
+[    0.006892] Faking a node at [mem 0x0000000000000000-0x000000083fffffff]
+[    0.006894] NODE_DATA(0) allocated [mem 0x83ffe0000-0x83ffe3fff]
+[    0.006927] Zone ranges:
+[    0.006927]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+[    0.006928]   DMA32    [mem 0x0000000001000000-0x00000000ffffffff]
+[    0.006929]   Normal   [mem 0x0000000100000000-0x000000083fffffff]
+[    0.006930] Movable zone start for each node
+[    0.006931] Early memory node ranges
+[    0.006931]   node   0: [mem 0x0000000000001000-0x000000000009efff]
+[    0.006932]   node   0: [mem 0x0000000000100000-0x00000000bffdefff]
+[    0.006933]   node   0: [mem 0x0000000100000000-0x000000083fffffff]
+[    0.006935] Initmem setup node 0 [mem 0x0000000000001000-0x000000083fffffff]
+[    0.007168] On node 0, zone DMA: 1 pages in unavailable ranges
+[    0.007183] On node 0, zone DMA: 97 pages in unavailable ranges
+[    0.092456] On node 0, zone Normal: 33 pages in unavailable ranges
+[    0.092733] ACPI: PM-Timer IO Port: 0x608
+[    0.092742] ACPI: LAPIC_NMI (acpi_id[0xff] dfl dfl lint[0x1])
+[    0.092774] IOAPIC[0]: apic_id 0, version 17, address 0xfec00000, GSI 0-23
+[    0.092777] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+[    0.092779] ACPI: INT_SRC_OVR (bus 0 bus_irq 5 global_irq 5 high level)
+[    0.092779] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+[    0.092783] ACPI: INT_SRC_OVR (bus 0 bus_irq 10 global_irq 10 high level)
+[    0.092783] ACPI: INT_SRC_OVR (bus 0 bus_irq 11 global_irq 11 high level)
+[    0.092787] ACPI: Using ACPI (MADT) for SMP configuration information
+[    0.092788] ACPI: HPET id: 0x8086a201 base: 0xfed00000
+[    0.092793] smpboot: Allowing 10 CPUs, 0 hotplug CPUs
+[    0.092810] kvm-guest: APIC: eoi() replaced with kvm_guest_apic_eoi_write()
+[    0.092838] PM: hibernation: Registered nosave memory: [mem 0x00000000-0x00000fff]
+[    0.092839] PM: hibernation: Registered nosave memory: [mem 0x0009f000-0x0009ffff]
+[    0.092840] PM: hibernation: Registered nosave memory: [mem 0x000a0000-0x000effff]
+[    0.092840] PM: hibernation: Registered nosave memory: [mem 0x000f0000-0x000fffff]
+[    0.092841] PM: hibernation: Registered nosave memory: [mem 0xbffdf000-0xbfffffff]
+[    0.092842] PM: hibernation: Registered nosave memory: [mem 0xc0000000-0xfeffbfff]
+[    0.092842] PM: hibernation: Registered nosave memory: [mem 0xfeffc000-0xfeffffff]
+[    0.092843] PM: hibernation: Registered nosave memory: [mem 0xff000000-0xfffbffff]
+[    0.092843] PM: hibernation: Registered nosave memory: [mem 0xfffc0000-0xffffffff]
+[    0.092844] [mem 0xc0000000-0xfeffbfff] available for PCI devices
+[    0.092847] Booting paravirtualized kernel on KVM
+[    0.092850] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1910969940391419 ns
+[    0.098291] setup_percpu: NR_CPUS:64 nr_cpumask_bits:10 nr_cpu_ids:10 nr_node_ids:1
+[    0.099419] percpu: Embedded 55 pages/cpu s185000 r8192 d32088 u524288
+[    0.099426] pcpu-alloc: s185000 r8192 d32088 u524288 alloc=1*2097152
+[    0.099427] pcpu-alloc: [0] 00 01 02 03 [0] 04 05 06 07 
+[    0.099431] pcpu-alloc: [0] 08 09 -- -- 
+[    0.099453] Kernel command line: root=/dev/sda1 single console=ttyS0 systemd.unit=graphical.target cgroup_no_v1=all
+[    0.099498] Unknown kernel command line parameters "single", will be passed to user space.
+[    0.104575] Dentry cache hash table entries: 4194304 (order: 13, 33554432 bytes, linear)
+[    0.107167] Inode-cache hash table entries: 2097152 (order: 12, 16777216 bytes, linear)
+[    0.107314] Fallback order for Node 0: 0 
+[    0.107319] Built 1 zonelists, mobility grouping on.  Total pages: 8257247
+[    0.107320] Policy zone: Normal
+[    0.107322] mem auto-init: stack:off, heap alloc:off, heap free:off
+[    0.107339] software IO TLB: area num 16.
+[    0.183087] Memory: 32871816K/33553908K available (18432K kernel code, 2799K rwdata, 6732K rodata, 2704K init, 1208K bss, 681832K reserved, 0K cma-reserved)
+[    0.183138] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=10, Nodes=1
+[    0.183152] Kernel/User page tables isolation: enabled
+[    0.185061] Dynamic Preempt: voluntary
+[    0.185334] rcu: Preemptible hierarchical RCU implementation.
+[    0.185334] rcu: 	RCU event tracing is enabled.
+[    0.185334] rcu: 	RCU restricting CPUs from NR_CPUS=64 to nr_cpu_ids=10.
+[    0.185336] 	Trampoline variant of Tasks RCU enabled.
+[    0.185337] rcu: RCU calculated value of scheduler-enlistment delay is 100 jiffies.
+[    0.185338] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=10
+[    0.186670] NR_IRQS: 4352, nr_irqs: 504, preallocated irqs: 16
+[    0.186861] rcu: srcu_init: Setting srcu_struct sizes based on contention.
+[    0.190309] Console: colour VGA+ 80x25
+[    0.190345] printk: legacy console [ttyS0] enabled
+[    0.243919] ACPI: Core revision 20230628
+[    0.244331] clocksource: hpet: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604467 ns
+[    0.245122] APIC: Switch to symmetric I/O mode setup
+[    0.245549] APIC: Switched APIC routing to: physical flat
+[    0.246719] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+[    0.247230] clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x2c9475bb8da, max_idle_ns: 440795307408 ns
+[    0.248437] Calibrating delay loop (skipped) preset value.. 6185.46 BogoMIPS (lpj=3092732)
+[    0.249516] Last level iTLB entries: 4KB 0, 2MB 0, 4MB 0
+[    0.249933] Last level dTLB entries: 4KB 0, 2MB 0, 4MB 0, 1GB 0
+[    0.250393] Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+[    0.250436] Spectre V2 : Mitigation: Retpolines
+[    0.251435] Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
+[    0.252074] Spectre V2 : Spectre v2 / SpectreRSB : Filling RSB on VMEXIT
+[    0.252435] Speculative Store Bypass: Vulnerable
+[    0.252787] MDS: Vulnerable: Clear CPU buffers attempted, no microcode
+[    0.253435] MMIO Stale Data: Unknown: No mitigations
+[    0.253822] x86/fpu: x87 FPU will use FXSAVE
+[    0.273101] Freeing SMP alternatives memory: 48K
+[    0.273436] pid_max: default: 32768 minimum: 301
+[    0.273812] LSM: initializing lsm=capability,selinux,integrity
+[    0.274262] SELinux:  Initializing.
+[    0.274705] Mount-cache hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[    0.275458] Mountpoint-cache hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[    0.276142] cgroup: Disabling cpuset control group subsystem in v1 mounts
+[    0.276439] cgroup: Disabling cpu control group subsystem in v1 mounts
+[    0.276927] cgroup: Disabling cpuacct control group subsystem in v1 mounts
+[    0.277437] cgroup: Disabling blkio control group subsystem in v1 mounts
+[    0.277944] cgroup: Disabling memory control group subsystem in v1 mounts
+[    0.278438] cgroup: Disabling devices control group subsystem in v1 mounts
+[    0.278959] cgroup: Disabling freezer control group subsystem in v1 mounts
+[    0.279446] cgroup: Disabling net_cls control group subsystem in v1 mounts
+[    0.279972] cgroup: Disabling perf_event control group subsystem in v1 mounts
+[    0.280435] cgroup: Disabling net_prio control group subsystem in v1 mounts
+[    0.281436] cgroup: Disabling hugetlb control group subsystem in v1 mounts
+[    0.282436] cgroup: Disabling pids control group subsystem in v1 mounts
+[    0.282936] cgroup: Disabling rdma control group subsystem in v1 mounts
+[    0.283436] cgroup: Disabling misc control group subsystem in v1 mounts
+[    0.283940] cgroup: Disabling debug control group subsystem in v1 mounts
+[    0.386613] smpboot: CPU0: Intel QEMU Virtual CPU version 2.5+ (family: 0x6, model: 0x6, stepping: 0x3)
+[    0.387429] RCU Tasks: Setting shift to 4 and lim to 1 rcu_task_cb_adjust=1.
+[    0.387446] Performance Events: PMU not available due to virtualization, using software events only.
+[    0.388468] signal: max sigframe size: 1440
+[    0.388809] rcu: Hierarchical SRCU implementation.
+[    0.389172] rcu: 	Max phase no-delay instances is 400.
+[    0.389602] smp: Bringing up secondary CPUs ...
+[    0.390010] smpboot: x86: Booting SMP configuration:
+[    0.390437] .... node  #0, CPUs:        #1  #2  #3  #4  #5  #6  #7  #8  #9
+[    0.060566] smpboot: CPU 1 Converting physical 0 to logical die 1
+[    0.060566] smpboot: CPU 2 Converting physical 0 to logical die 2
+[    0.060566] smpboot: CPU 3 Converting physical 0 to logical die 3
+[    0.060566] smpboot: CPU 4 Converting physical 0 to logical die 4
+[    0.060566] smpboot: CPU 5 Converting physical 0 to logical die 5
+[    0.060566] smpboot: CPU 6 Converting physical 0 to logical die 6
+[    0.060566] smpboot: CPU 7 Converting physical 0 to logical die 7
+[    0.060566] smpboot: CPU 8 Converting physical 0 to logical die 8
+[    0.060566] smpboot: CPU 9 Converting physical 0 to logical die 9
+[    0.409553] smp: Brought up 1 node, 10 CPUs
+[    0.410437] smpboot: Max logical packages: 10
+[    0.410770] smpboot: Total of 10 processors activated (61854.64 BogoMIPS)
+[    0.414222] devtmpfs: initialized
+[    0.414653] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+[    0.415437] futex hash table entries: 4096 (order: 6, 262144 bytes, linear)
+[    0.416435] PM: RTC time: 22:53:59, date: 2024-05-02
+[    0.417161] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.417514] audit: initializing netlink subsys (disabled)
+[    0.417950] audit: type=2000 audit(1714690440.080:1): state=initialized audit_enabled=0 res=1
+[    0.417950] thermal_sys: Registered thermal governor 'step_wise'
+[    0.418437] thermal_sys: Registered thermal governor 'user_space'
+[    0.419441] cpuidle: using governor menu
+[    0.420484] PCI: Using configuration type 1 for base access
+[    0.420971] kprobes: kprobe jump-optimization is enabled. All kprobes are optimized if possible.
+[    0.425637] HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.426435] HugeTLB: 28 KiB vmemmap can be freed for a 2.00 MiB page
+[    0.427164] ACPI: Added _OSI(Module Device)
+[    0.427435] ACPI: Added _OSI(Processor Device)
+[    0.427774] ACPI: Added _OSI(3.0 _SCP Extensions)
+[    0.428132] ACPI: Added _OSI(Processor Aggregator Device)
+[    0.428796] ACPI: 1 ACPI AML tables successfully acquired and loaded
+[    0.434335] ACPI: _OSC evaluation for CPUs failed, trying _PDC
+[    0.435643] ACPI: Interpreter enabled
+[    0.436466] ACPI: PM: (supports S0 S3 S4 S5)
+[    0.437436] ACPI: Using IOAPIC for interrupt routing
+[    0.438460] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    0.440436] PCI: Using E820 reservations for host bridge windows
+[    0.441581] ACPI: Enabled 2 GPEs in block 00 to 0F
+[    0.447816] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+[    0.448440] acpi PNP0A03:00: _OSC: OS supports [ASPM ClockPM Segments MSI HPX-Type3]
+[    0.450436] acpi PNP0A03:00: _OSC: not requesting OS control; OS requires [ExtendedConfig ASPM ClockPM MSI]
+[    0.451444] acpi PNP0A03:00: fail to add MMCONFIG information, can't access extended configuration space under this bridge
+[    0.453534] PCI host bridge to bus 0000:00
+[    0.454152] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+[    0.455436] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+[    0.456435] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+[    0.457435] pci_bus 0000:00: root bus resource [mem 0xc0000000-0xfebfffff window]
+[    0.458435] pci_bus 0000:00: root bus resource [mem 0x840000000-0x8bfffffff window]
+[    0.459436] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    0.460052] pci 0000:00:00.0: [8086:1237] type 00 class 0x060000 conventional PCI endpoint
+[    0.461556] pci 0000:00:01.0: [8086:7000] type 00 class 0x060100 conventional PCI endpoint
+[    0.462880] pci 0000:00:01.1: [8086:7010] type 00 class 0x010180 conventional PCI endpoint
+[    0.465874] pci 0000:00:01.1: BAR 4 [io  0xc0a0-0xc0af]
+[    0.467451] pci 0000:00:01.1: BAR 0 [io  0x01f0-0x01f7]: legacy IDE quirk
+[    0.468161] pci 0000:00:01.1: BAR 1 [io  0x03f6]: legacy IDE quirk
+[    0.468435] pci 0000:00:01.1: BAR 2 [io  0x0170-0x0177]: legacy IDE quirk
+[    0.469435] pci 0000:00:01.1: BAR 3 [io  0x0376]: legacy IDE quirk
+[    0.470004] pci 0000:00:01.3: [8086:7113] type 00 class 0x068000 conventional PCI endpoint
+[    0.470684] pci 0000:00:01.3: quirk: [io  0x0600-0x063f] claimed by PIIX4 ACPI
+[    0.471439] pci 0000:00:01.3: quirk: [io  0x0700-0x070f] claimed by PIIX4 SMB
+[    0.472128] pci 0000:00:02.0: [1234:1111] type 00 class 0x030000 conventional PCI endpoint
+[    0.473858] pci 0000:00:02.0: BAR 0 [mem 0xfd000000-0xfdffffff pref]
+[    0.477203] pci 0000:00:02.0: BAR 2 [mem 0xfeb90000-0xfeb90fff]
+[    0.480855] pci 0000:00:02.0: ROM [mem 0xfeb80000-0xfeb8ffff pref]
+[    0.481516] pci 0000:00:02.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+[    0.482518] pci 0000:00:03.0: [1af4:1000] type 00 class 0x020000 conventional PCI endpoint
+[    0.483898] pci 0000:00:03.0: BAR 0 [io  0xc080-0xc09f]
+[    0.485730] pci 0000:00:03.0: BAR 1 [mem 0xfeb91000-0xfeb91fff]
+[    0.488229] pci 0000:00:03.0: BAR 4 [mem 0xfe000000-0xfe003fff 64bit pref]
+[    0.489436] pci 0000:00:03.0: ROM [mem 0xfeb00000-0xfeb7ffff pref]
+[    0.490258] pci 0000:00:04.0: [1af4:1009] type 00 class 0x000200 conventional PCI endpoint
+[    0.491435] pci 0000:00:04.0: BAR 0 [io  0xc000-0xc03f]
+[    0.492899] pci 0000:00:04.0: BAR 1 [mem 0xfeb92000-0xfeb92fff]
+[    0.496342] pci 0000:00:04.0: BAR 4 [mem 0xfe004000-0xfe007fff 64bit pref]
+[    0.499582] pci 0000:00:05.0: [1af4:1009] type 00 class 0x000200 conventional PCI endpoint
+[    0.500728] pci 0000:00:05.0: BAR 0 [io  0xc040-0xc07f]
+[    0.501712] pci 0000:00:05.0: BAR 1 [mem 0xfeb93000-0xfeb93fff]
+[    0.503723] pci 0000:00:05.0: BAR 4 [mem 0xfe008000-0xfe00bfff 64bit pref]
+[    0.505702] ACPI: PCI: Interrupt link LNKA configured for IRQ 10
+[    0.506208] ACPI: PCI: Interrupt link LNKB configured for IRQ 10
+[    0.506477] ACPI: PCI: Interrupt link LNKC configured for IRQ 11
+[    0.506975] ACPI: PCI: Interrupt link LNKD configured for IRQ 11
+[    0.507456] ACPI: PCI: Interrupt link LNKS configured for IRQ 9
+[    0.509796] iommu: Default domain type: Translated
+[    0.510435] iommu: DMA domain TLB invalidation policy: lazy mode
+[    0.511003] SCSI subsystem initialized
+[    0.511550] libata version 3.00 loaded.
+[    0.511550] ACPI: bus type USB registered
+[    0.511798] usbcore: registered new interface driver usbfs
+[    0.512227] usbcore: registered new interface driver hub
+[    0.512440] usbcore: registered new device driver usb
+[    0.512842] pps_core: LinuxPPS API ver. 1 registered
+[    0.513435] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.514127] PTP clock support registered
+[    0.514473] Advanced Linux Sound Architecture Driver Initialized.
+[    0.515144] NetLabel: Initializing
+[    0.515436] NetLabel:  domain hash size = 128
+[    0.515773] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    0.516446] NetLabel:  unlabeled traffic allowed by default
+[    0.517460] PCI: Using ACPI for IRQ routing
+[    0.517773] PCI: pci_cache_line_size set to 64 bytes
+[    0.517855] e820: reserve RAM buffer [mem 0x0009fc00-0x0009ffff]
+[    0.517858] e820: reserve RAM buffer [mem 0xbffdf000-0xbfffffff]
+[    0.517880] pci 0000:00:02.0: vgaarb: setting as boot VGA device
+[    0.517907] pci 0000:00:02.0: vgaarb: bridge control possible
+[    0.518342] pci 0000:00:02.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+[    0.519435] vgaarb: loaded
+[    0.519695] hpet: 3 channels of 0 reserved for per-cpu timers
+[    0.520150] hpet0: at MMIO 0xfed00000, IRQs 2, 8, 0
+[    0.520435] hpet0: 3 comparators, 64-bit 100.000000 MHz counter
+[    0.525515] clocksource: Switched to clocksource kvm-clock
+[    0.526593] VFS: Disk quotas dquot_6.6.0
+[    0.526913] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    0.527486] pnp: PnP ACPI init
+[    0.527824] pnp 00:03: [dma 2]
+[    0.527970] pnp: PnP ACPI: found 6 devices
+[    0.535924] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+[    0.536651] NET: Registered PF_INET protocol family
+[    0.537357] IP idents hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+[    0.539979] tcp_listen_portaddr_hash hash table entries: 16384 (order: 6, 262144 bytes, linear)
+[    0.540912] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    0.541504] TCP established hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+[    0.542960] TCP bind hash table entries: 65536 (order: 9, 2097152 bytes, linear)
+[    0.543938] TCP: Hash tables configured (established 262144 bind 65536)
+[    0.544485] UDP hash table entries: 16384 (order: 7, 524288 bytes, linear)
+[    0.545280] UDP-Lite hash table entries: 16384 (order: 7, 524288 bytes, linear)
+[    0.545922] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    0.546888] RPC: Registered named UNIX socket transport module.
+[    0.547340] RPC: Registered udp transport module.
+[    0.547708] RPC: Registered tcp transport module.
+[    0.548071] RPC: Registered tcp-with-tls transport module.
+[    0.548491] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.549408] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]
+[    0.549896] pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]
+[    0.550367] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff window]
+[    0.550901] pci_bus 0000:00: resource 7 [mem 0xc0000000-0xfebfffff window]
+[    0.551424] pci_bus 0000:00: resource 8 [mem 0x840000000-0x8bfffffff window]
+[    0.551984] pci 0000:00:01.0: PIIX3: Enabling Passive Release
+[    0.552428] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+[    0.552923] PCI: CLS 0 bytes, default 64
+[    0.553238] PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+[    0.553742] software IO TLB: mapped [mem 0x00000000bbfdf000-0x00000000bffdf000] (64MB)
+[    0.554380] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x2c9475bb8da, max_idle_ns: 440795307408 ns
+[    0.560327] Initialise system trusted keyrings
+[    0.560864] workingset: timestamp_bits=40 max_order=23 bucket_order=0
+[    0.561377] zbud: loaded
+[    0.561807] NFS: Registering the id_resolver key type
+[    0.562209] Key type id_resolver registered
+[    0.562533] Key type id_legacy registered
+[    0.562906] 9p: Installing v9fs 9p2000 file system support
+[    0.573970] Key type asymmetric registered
+[    0.574280] Asymmetric key parser 'x509' registered
+[    0.574674] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 251)
+[    0.575257] io scheduler mq-deadline registered
+[    0.575608] io scheduler kyber registered
+[    0.577016] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+[    0.577735] ACPI: button: Power Button [PWRF]
+[    0.587751] ACPI: \_SB_.LNKC: Enabled at IRQ 11
+[    0.598290] ACPI: \_SB_.LNKD: Enabled at IRQ 10
+[    0.608423] ACPI: \_SB_.LNKA: Enabled at IRQ 10
+[    0.609864] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    0.610450] 00:05: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
+[    0.611622] Non-volatile memory driver v1.3
+[    0.611951] Linux agpgart interface v0.103
+[    0.612316] ACPI: bus type drm_connector registered
+[    0.616219] loop: module loaded
+[    0.616575] zram: Added device: zram0
+[    0.616915] ata_piix 0000:00:01.1: version 2.13
+[    0.618001] scsi host0: ata_piix
+[    0.618627] scsi host1: ata_piix
+[    0.618900] ata1: PATA max MWDMA2 cmd 0x1f0 ctl 0x3f6 bmdma 0xc0a0 irq 14 lpm-pol 0
+[    0.619484] ata2: PATA max MWDMA2 cmd 0x170 ctl 0x376 bmdma 0xc0a8 irq 15 lpm-pol 0
+[    0.621147] e100: Intel(R) PRO/100 Network Driver
+[    0.621643] e100: Copyright(c) 1999-2006 Intel Corporation
+[    0.622114] e1000: Intel(R) PRO/1000 Network Driver
+[    0.622490] e1000: Copyright (c) 1999-2006 Intel Corporation.
+[    0.622945] e1000e: Intel(R) PRO/1000 Network Driver
+[    0.623328] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+[    0.623790] sky2: driver version 1.30
+[    0.624278] usbcore: registered new interface driver usblp
+[    0.624713] usbcore: registered new interface driver usb-storage
+[    0.625217] i8042: PNP: PS/2 Controller [PNP0303:KBD,PNP0f13:MOU] at 0x60,0x64 irq 1,12
+[    0.626763] serio: i8042 KBD port at 0x60,0x64 irq 1
+[    0.627154] serio: i8042 AUX port at 0x60,0x64 irq 12
+[    0.627795] rtc_cmos 00:00: RTC can wake from S4
+[    0.628602] rtc_cmos 00:00: registered as rtc0
+[    0.628977] rtc_cmos 00:00: alarms up to one day, y3k, 114 bytes nvram, hpet irqs
+[    0.629618] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input1
+[    0.630431] device-mapper: ioctl: 4.48.0-ioctl (2023-03-01) initialised: dm-devel@redhat.com
+[    0.631222] intel_pstate: CPU model not supported
+[    0.631641] hid: raw HID events driver (C) Jiri Kosina
+[    0.632172] usbcore: registered new interface driver usbhid
+[    0.632616] usbhid: USB HID core driver
+[    0.633987] Initializing XFRM netlink socket
+[    0.634339] NET: Registered PF_INET6 protocol family
+[    0.635537] Segment Routing with IPv6
+[    0.635847] In-situ OAM (IOAM) with IPv6
+[    0.636181] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    0.636961] NET: Registered PF_PACKET protocol family
+[    0.637375] 9pnet: Installing 9P2000 support
+[    0.638491] Key type dns_resolver registered
+[    0.640464] IPI shorthand broadcast: enabled
+[    0.643032] sched_clock: Marking stable (583361776, 59566593)->(814914302, -171985933)
+[    0.643836] registered taskstats version 1
+[    0.644228] Loading compiled-in X.509 certificates
+[    0.645944] PM:   Magic number: 8:816:905
+[    0.646296] printk: legacy console [netcon0] enabled
+[    0.646697] netconsole: network logging started
+[    0.647083] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    0.647939] kworker/u25:3 (106) used greatest stack depth: 14408 bytes left
+[    0.649537] kworker/u25:3 (107) used greatest stack depth: 14000 bytes left
+[    0.649848] Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    0.651784] Loaded X.509 cert 'wens: 61c038651aabdcf94bd0ac7ff06c7248db18c600'
+[    0.652370] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+[    0.653040] cfg80211: failed to load regulatory.db
+[    0.653427] ALSA device list:
+[    0.653663]   No soundcards found.
+[    0.774380] ata2: found unknown device (class 0)
+[    0.776530] ata1.00: ATA-7: QEMU HARDDISK, 2.5+, max UDMA/100
+[    0.777521] ata1.00: 273047552 sectors, multi 16: LBA48 
+[    0.778344] ata1.01: ATA-7: QEMU HARDDISK, 2.5+, max UDMA/100
+[    0.779231] ata1.01: 732 sectors, multi 16: LBA48 
+[    0.780287] ata2.00: ATAPI: QEMU DVD-ROM, 2.5+, max UDMA/100
+[    0.783366] scsi 0:0:0:0: Direct-Access     ATA      QEMU HARDDISK    2.5+ PQ: 0 ANSI: 5
+[    0.785039] sd 0:0:0:0: [sda] 273047552 512-byte logical blocks: (140 GB/130 GiB)
+[    0.786220] sd 0:0:0:0: Attached scsi generic sg0 type 0
+[    0.787089] sd 0:0:0:0: [sda] Write Protect is off
+[    0.787844] sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
+[    0.787979] scsi 0:0:1:0: Direct-Access     ATA      QEMU HARDDISK    2.5+ PQ: 0 ANSI: 5
+[    0.789242] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[    0.790653] sd 0:0:0:0: [sda] Preferred minimum I/O size 512 bytes
+[    0.791944] scsi 0:0:1:0: Attached scsi generic sg1 type 0
+[    0.793336] sd 0:0:1:0: [sdb] 732 512-byte logical blocks: (375 kB/366 KiB)
+[    0.794781] sd 0:0:1:0: [sdb] Write Protect is off
+[    0.795357] sd 0:0:1:0: [sdb] Mode Sense: 00 3a 00 00
+[    0.795378] scsi 1:0:0:0: CD-ROM            QEMU     QEMU DVD-ROM     2.5+ PQ: 0 ANSI: 5
+[    0.796660] sd 0:0:1:0: [sdb] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[    0.798377] sd 0:0:1:0: [sdb] Preferred minimum I/O size 512 bytes
+[    0.803776]  sda: sda1 sda14 sda15
+[    0.803813] sd 0:0:1:0: [sdb] Attached SCSI disk
+[    0.804715] sd 0:0:0:0: [sda] Attached SCSI disk
+[    0.815663] sr 1:0:0:0: [sr0] scsi3-mmc drive: 4x/4x cd/rw xa/form2 tray
+[    0.816720] cdrom: Uniform CD-ROM driver Revision: 3.20
+[    0.824668] sr 1:0:0:0: Attached scsi CD-ROM sr0
+[    0.824925] sr 1:0:0:0: Attached scsi generic sg2 type 5
+[    1.264038] input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input3
+[    1.265692] md: Waiting for all devices to be available before autodetect
+[    1.266757] md: If you don't use raid, use raid=noautodetect
+[    1.267638] md: Autodetecting RAID arrays.
+[    1.268254] md: autorun ...
+[    1.268696] md: ... autorun DONE.
+[    1.274348] EXT4-fs (sda1): INFO: recovery required on readonly filesystem
+[    1.275425] EXT4-fs (sda1): write access will be enabled during recovery
+[    1.369785] EXT4-fs (sda1): orphan cleanup on readonly fs
+[    1.371003] EXT4-fs (sda1): 6 orphan inodes deleted
+[    1.371772] EXT4-fs (sda1): recovery complete
+[    1.395625] EXT4-fs (sda1): mounted filesystem 840082fd-4646-4649-bf63-d92ca9fe2b97 ro with ordered data mode. Quota mode: none.
+[    1.397413] VFS: Mounted root (ext4 filesystem) readonly on device 8:1.
+[    1.398943] devtmpfs: mounted
+[    1.401488] Freeing unused kernel image (initmem) memory: 2704K
+[    1.402587] Write protecting the kernel read-only data: 26624k
+[    1.404296] Freeing unused kernel image (rodata/data gap) memory: 1460K
+[    1.482137] x86/mm: Checked W+X mappings: passed, no W+X pages found.
+[    1.482498] x86/mm: Checking user space page tables
+[    1.544485] x86/mm: Checked W+X mappings: passed, no W+X pages found.
+[    1.544842] Run /sbin/init as init process
+[    1.545069]   with arguments:
+[    1.545070]     /sbin/init
+[    1.545070]     single
+[    1.545071]   with environment:
+[    1.545071]     HOME=/
+[    1.545072]     TERM=linux
+[    1.647382] systemd[1]: systemd 249.11-0ubuntu3.12 running in system mode (+PAM +AUDIT +SELINUX +APPARMOR +IMA +SMACK +SECCOMP +GCRYPT +GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 -IDN +IPTC +KMOD +LIBCRYPTSETUP +LIBFDISK +PCRE2 -PWQUALITY -P11KIT -QRENCODE +BZIP2 +LZ4 +XZ +ZLIB +ZSTD -XKBCOMMON +UTMP +SYSVINIT default-hierarchy=unified)
+[    1.651586] systemd[1]: Detected virtualization kvm.
+[    1.652274] systemd[1]: Detected architecture x86-64.
+[    1.656895] systemd[1]: Hostname set to <ubuntu>.
+[    1.686822] snapd-env-gener (125) used greatest stack depth: 13224 bytes left
+[    1.724933] snapd-generator (133) used greatest stack depth: 12680 bytes left
+[    1.801563] block sda: the capability attribute has been deprecated.
+[    1.814674] netplan (131) used greatest stack depth: 12264 bytes left
+[    1.966609] random: crng init done
+[    2.084252] systemd[1]: Queued start job for default target Graphical Interface.
+[    2.093041] systemd[1]: Created slice Slice /system/modprobe.
+[    2.095249] systemd[1]: Created slice Slice /system/serial-getty.
+[    2.097014] systemd[1]: Created slice Slice /system/systemd-fsck.
+[    2.098744] systemd[1]: Created slice User and Session Slice.
+[    2.100317] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+[    2.102580] systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+[    2.104774] systemd[1]: Reached target Slice Units.
+[    2.106141] systemd[1]: Reached target Mounting snaps.
+[    2.107597] systemd[1]: Reached target Mounted snaps.
+[    2.108966] systemd[1]: Reached target Swaps.
+[    2.110616] systemd[1]: Reached target Local Verity Protected Volumes.
+[    2.112620] systemd[1]: Listening on Device-mapper event daemon FIFOs.
+[    2.114685] systemd[1]: Listening on LVM2 poll daemon socket.
+[    2.116541] systemd[1]: Listening on multipathd control socket.
+[    2.118434] systemd[1]: Listening on Syslog Socket.
+[    2.120073] systemd[1]: Listening on fsck to fsckd communication Socket.
+[    2.122274] systemd[1]: Listening on initctl Compatibility Named Pipe.
+[    2.124683] systemd[1]: Listening on Journal Audit Socket.
+[    2.126639] systemd[1]: Listening on Journal Socket (/dev/log).
+[    2.129098] systemd[1]: Listening on Journal Socket.
+[    2.131059] systemd[1]: Listening on Network Service Netlink Socket.
+[    2.133402] systemd[1]: Listening on udev Control Socket.
+[    2.135360] systemd[1]: Listening on udev Kernel Socket.
+[    2.146749] systemd[1]: Mounting Huge Pages File System...
+[    2.149857] systemd[1]: Mounting POSIX Message Queue File System...
+[    2.153767] systemd[1]: Mounting Kernel Debug File System...
+[    2.157338] systemd[1]: Mounting Kernel Trace File System...
+[    2.159610] systemd[1]: systemd-journald.service: unit configures an IP firewall, but the local system does not support BPF/cgroup firewalling.
+[    2.161671] systemd[1]: (This warning is only shown for the first unit using IP firewalling.)
+[    2.163891] systemd[1]: Starting Journal Service...
+[    2.167044] systemd[1]: Starting Set the console keyboard layout...
+[    2.171327] systemd[1]: Condition check resulted in Create List of Static Device Nodes being skipped.
+[    2.173298] systemd[1]: Starting Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling...
+[    2.175914] systemd[1]: Condition check resulted in LXD - agent being skipped.
+[    2.178560] systemd[1]: Starting Load Kernel Module configfs...
+[    2.181356] systemd[1]: Starting Load Kernel Module drm...
+[    2.184370] systemd[1]: Starting Load Kernel Module efi_pstore...
+[    2.187292] systemd[1]: Starting Load Kernel Module fuse...
+[    2.189134] systemd[1]: Condition check resulted in OpenVSwitch configuration for cleanup being skipped.
+[    2.190924] systemd[1]: Starting File System Check on Root Device...
+[    2.197109] systemd[1]: Starting Load Kernel Modules...
+[    2.199931] systemd[1]: Starting Coldplug All udev Devices...
+[    2.202914] systemd[1]: Mounted Huge Pages File System.
+[    2.203504] systemd[1]: Mounted POSIX Message Queue File System.
+[    2.204575] systemd[1]: Mounted Kernel Debug File System.
+[    2.205611] systemd[1]: Mounted Kernel Trace File System.
+[    2.206685] systemd[1]: modprobe@configfs.service: Deactivated successfully.
+[    2.207680] systemd[1]: Finished Load Kernel Module configfs.
+[    2.209199] systemd[1]: modprobe@drm.service: Deactivated successfully.
+[    2.210501] systemd[1]: Finished Load Kernel Module drm.
+[    2.211680] systemd[1]: modprobe@efi_pstore.service: Deactivated successfully.
+[    2.212528] systemd[1]: Finished Load Kernel Module efi_pstore.
+[    2.213785] systemd[1]: modprobe@fuse.service: Deactivated successfully.
+[    2.214607] systemd[1]: Finished Load Kernel Module fuse.
+[    2.215441] systemd[1]: Finished Load Kernel Modules.
+[    2.216604] systemd[1]: Condition check resulted in FUSE Control File System being skipped.
+[    2.217399] systemd[1]: Condition check resulted in Kernel Configuration File System being skipped.
+[    2.219017] systemd[1]: Started File System Check Daemon to report status.
+[    2.220241] systemd[1]: Starting Apply Kernel Variables...
+[    2.224456] systemd[1]: Finished File System Check on Root Device.
+[    2.226122] systemd[1]: Starting Remount Root and Kernel File Systems...
+[    2.229222] systemd[1]: Started Journal Service.
+[    2.321269] EXT4-fs (sda1): re-mounted 840082fd-4646-4649-bf63-d92ca9fe2b97 r/w. Quota mode: none.
+[    2.347656] systemd-journald[167]: Received client request to flush runtime journal.
+[    2.372382] systemd-journald[167]: File /var/log/journal/4023df6efa1840f3b70e424c53b81310/system.journal corrupted or uncleanly shut down, renaming and replacing.
+[    2.677774] virtio_net virtio0 enp0s3: renamed from eth0
+[    4.015145] ISO 9660 Extensions: Microsoft Joliet Level 3
+[    4.015906] ISO 9660 Extensions: RRIP_1991A
+[    7.703744] loop0: detected capacity change from 0 to 8
+[   12.353495] loop0: detected capacity change from 0 to 79328
+[  211.624113] systemd-journald[167]: File /var/log/journal/4023df6efa1840f3b70e424c53b81310/user-1000.journal corrupted or uncleanly shut down, renaming and replacing.
+[  307.715844] loop0: detected capacity change from 0 to 8
+[  316.038660] loop0: detected capacity change from 0 to 79328
+[  322.370072] zram0: detected capacity change from 0 to 8388608
+[  322.388048] Adding 4194300k swap on /dev/zram0.  Priority:-2 extents:1 across:4194300k SS
+[  322.641674] 0001_sync_drop_ (1429): drop_caches: 3
+[  322.691936] damon-dbgfs: DAMON debugfs interface is deprecated, so users should move to DAMON_SYSFS. If you cannot, please report your usecase to damon@lists.linux.dev and linux-mm@kvack.org.
+[  344.383122] 0001_sync_drop_ (2192): drop_caches: 3
+[  381.232592] 0001_sync_drop_ (3451): drop_caches: 3
+[  417.985305] 0001_sync_drop_ (4693): drop_caches: 3
+[  459.814956] 0001_sync_drop_ (6105): drop_caches: 3
+[  482.036777] 0001_sync_drop_ (7040): drop_caches: 3
+[  519.270263] 0001_sync_drop_ (8630): drop_caches: 3
+[  556.505624] 0001_sync_drop_ (10221): drop_caches: 3
+[  598.784354] 0001_sync_drop_ (12031): drop_caches: 3
+[  607.720381] loop0: detected capacity change from 0 to 8
+[  611.924943] loop0: detected capacity change from 0 to 79328
+[  621.050800] 0001_sync_drop_ (13378): drop_caches: 3
+[  658.300617] 0001_sync_drop_ (14971): drop_caches: 3
+[  695.570915] 0001_sync_drop_ (16562): drop_caches: 3
+[  737.842294] 0001_sync_drop_ (18373): drop_caches: 3
+[  760.089294] 0001_sync_drop_ (19308): drop_caches: 3
+[  797.372187] 0001_sync_drop_ (20898): drop_caches: 3
+[  834.642002] 0001_sync_drop_ (22481): drop_caches: 3
+[  877.278883] 0001_sync_drop_ (24292): drop_caches: 3
+[  899.543684] 0001_sync_drop_ (25226): drop_caches: 3
+[  907.717080] loop0: detected capacity change from 0 to 8
+[  916.180820] loop0: detected capacity change from 0 to 79328
+[  936.852964] 0001_sync_drop_ (27150): drop_caches: 3
+[  974.126328] 0001_sync_drop_ (28740): drop_caches: 3
+[ 1016.398492] 0001_sync_drop_ (30553): drop_caches: 3
+[ 1038.639525] 0001_sync_drop_ (31487): drop_caches: 3
+[ 1075.911043] 0001_sync_drop_ (33077): drop_caches: 3
+[ 1113.183975] 0001_sync_drop_ (34668): drop_caches: 3
+[ 1207.719414] loop0: detected capacity change from 0 to 8
+[ 1211.598804] loop0: detected capacity change from 0 to 79328
+[ 1507.715804] loop0: detected capacity change from 0 to 8
+[ 1515.850374] loop0: detected capacity change from 0 to 79328
+[ 1807.716211] loop0: detected capacity change from 0 to 8
+[ 1811.326224] loop0: detected capacity change from 0 to 79328
+[ 2107.715719] loop0: detected capacity change from 0 to 8
+[ 2115.096798] loop0: detected capacity change from 0 to 79328
+[ 2407.716300] loop0: detected capacity change from 0 to 8
+[ 2411.297925] loop0: detected capacity change from 0 to 79328
+[ 2707.715453] loop0: detected capacity change from 0 to 8
+[ 2715.209918] loop0: detected capacity change from 0 to 79328
+[ 3007.716031] loop0: detected capacity change from 0 to 8
+[ 3011.074330] loop0: detected capacity change from 0 to 79328
+[ 3307.714887] loop0: detected capacity change from 0 to 8
+[ 3315.191825] loop0: detected capacity change from 0 to 79328
+[ 3607.715353] loop0: detected capacity change from 0 to 8
+[ 3610.941885] loop0: detected capacity change from 0 to 79328
+[ 3907.715391] loop0: detected capacity change from 0 to 8
+[ 3914.396808] loop0: detected capacity change from 0 to 79328
+[ 4207.715977] loop0: detected capacity change from 0 to 8
+[ 4211.236136] loop0: detected capacity change from 0 to 79328
+[ 4265.174070] kworker/dying (77) used greatest stack depth: 12120 bytes left
+[ 4507.716498] loop0: detected capacity change from 0 to 8
+[ 4515.140121] loop0: detected capacity change from 0 to 79328
+[ 4807.715412] loop0: detected capacity change from 0 to 8
+[ 4810.967938] loop0: detected capacity change from 0 to 79328
+[ 5107.715859] loop0: detected capacity change from 0 to 8
+[ 5114.678856] loop0: detected capacity change from 0 to 79328
+[ 5407.715934] loop0: detected capacity change from 0 to 8
+[ 5410.729968] loop0: detected capacity change from 0 to 79328
+[ 5707.716896] loop0: detected capacity change from 0 to 8
+[ 5714.623491] loop0: detected capacity change from 0 to 79328
+[ 6007.716454] loop0: detected capacity change from 0 to 8
+[ 6010.735901] loop0: detected capacity change from 0 to 79328
+[ 6307.715832] loop0: detected capacity change from 0 to 8
+[ 6314.242297] loop0: detected capacity change from 0 to 79328
+[ 6607.716046] loop0: detected capacity change from 0 to 8
+[ 6610.946361] loop0: detected capacity change from 0 to 79328
+[ 6907.715754] loop0: detected capacity change from 0 to 8
+[ 6914.372206] loop0: detected capacity change from 0 to 79328
+[ 7207.715074] loop0: detected capacity change from 0 to 8
+[ 7211.152904] loop0: detected capacity change from 0 to 79328
+[ 7507.715978] loop0: detected capacity change from 0 to 8
+[ 7514.953903] loop0: detected capacity change from 0 to 79328
+[ 7807.715243] loop0: detected capacity change from 0 to 8
+[ 7811.665865] loop0: detected capacity change from 0 to 79328
+[ 8107.715182] loop0: detected capacity change from 0 to 8
+[ 8115.982871] loop0: detected capacity change from 0 to 79328
+[ 8407.716134] loop0: detected capacity change from 0 to 8
+[ 8411.005888] loop0: detected capacity change from 0 to 79328
+[ 8707.715413] loop0: detected capacity change from 0 to 8
+[ 8714.694927] loop0: detected capacity change from 0 to 79328
+[ 9007.715922] loop0: detected capacity change from 0 to 8
+[ 9011.658954] loop0: detected capacity change from 0 to 79328
+[ 9223.882372] zram: Cannot change disksize for initialized device
+[ 9223.918510] Adding 4194300k swap on /dev/zram0.  Priority:-2 extents:1 across:4194300k SS
+[ 9224.160237] 0001_sync_drop_ (70687): drop_caches: 3
+[ 9245.919701] 0001_sync_drop_ (71442): drop_caches: 3
+[ 9282.759709] 0001_sync_drop_ (72687): drop_caches: 3
+[ 9307.719431] loop0: detected capacity change from 0 to 8
+[ 9316.469811] loop0: detected capacity change from 0 to 79328
+[ 9319.659356] 0001_sync_drop_ (74260): drop_caches: 3
+[ 9361.410614] 0001_sync_drop_ (75649): drop_caches: 3
+[ 9384.632624] 0001_sync_drop_ (76615): drop_caches: 3
+[ 9422.888393] 0001_sync_drop_ (78249): drop_caches: 3
+[ 9461.138554] 0001_sync_drop_ (79883): drop_caches: 3
+[ 9504.404652] 0001_sync_drop_ (81742): drop_caches: 3
+[ 9526.614540] 0001_sync_drop_ (82674): drop_caches: 3
+[ 9563.849862] 0001_sync_drop_ (84259): drop_caches: 3
+[ 9601.095109] 0001_sync_drop_ (85845): drop_caches: 3
+[ 9607.718401] loop0: detected capacity change from 0 to 8
+[ 9611.630202] loop0: detected capacity change from 0 to 79328
+[ 9643.374526] 0001_sync_drop_ (87971): drop_caches: 3
+[ 9667.473136] 0001_sync_drop_ (89198): drop_caches: 3
+[ 9706.759637] 0001_sync_drop_ (91261): drop_caches: 3
+[ 9745.923862] 0001_sync_drop_ (93306): drop_caches: 3
+[ 9790.152141] 0001_sync_drop_ (95636): drop_caches: 3
+[ 9813.414147] 0001_sync_drop_ (96850): drop_caches: 3
+[ 9851.793402] 0001_sync_drop_ (98878): drop_caches: 3
+[ 9890.086031] 0001_sync_drop_ (100908): drop_caches: 3
+[ 9907.739531] loop0: detected capacity change from 0 to 8
+[ 9916.374748] loop0: detected capacity change from 0 to 79328
+[ 9933.322437] 0001_sync_drop_ (103531): drop_caches: 3
+[ 9955.140203] 0001_sync_drop_ (104284): drop_caches: 3
+[ 9992.020588] 0001_sync_drop_ (105527): drop_caches: 3
+[10028.897590] 0001_sync_drop_ (106778): drop_caches: 3
+[10070.841258] 0001_sync_drop_ (108188): drop_caches: 3
+[10093.087655] 0001_sync_drop_ (109118): drop_caches: 3
+[10130.332933] 0001_sync_drop_ (110703): drop_caches: 3
+[10167.602925] 0001_sync_drop_ (112291): drop_caches: 3
+[10207.722598] loop0: detected capacity change from 0 to 8
+[10209.929403] 0001_sync_drop_ (114295): drop_caches: 3
+[10211.661743] loop0: detected capacity change from 0 to 79328
+[10231.760389] 0001_sync_drop_ (115181): drop_caches: 3
+[10268.631025] 0001_sync_drop_ (116426): drop_caches: 3
+[10305.580087] 0001_sync_drop_ (117681): drop_caches: 3
+[10346.795487] 0001_sync_drop_ (119075): drop_caches: 3
+[10370.058000] 0001_sync_drop_ (120040): drop_caches: 3
+[10408.324693] 0001_sync_drop_ (121675): drop_caches: 3
+[10446.607902] 0001_sync_drop_ (123310): drop_caches: 3
+[10489.892045] 0001_sync_drop_ (125172): drop_caches: 3
+[10507.721190] loop0: detected capacity change from 0 to 8
+[10512.144327] 0001_sync_drop_ (126112): drop_caches: 3
+[10516.145731] loop0: detected capacity change from 0 to 79328
+[10549.440894] 0001_sync_drop_ (128019): drop_caches: 3
+[10586.724032] 0001_sync_drop_ (129597): drop_caches: 3
+[10629.009298] 0001_sync_drop_ (131404): drop_caches: 3
+[10653.148163] 0001_sync_drop_ (132632): drop_caches: 3
+[10692.444525] 0001_sync_drop_ (134697): drop_caches: 3
+[10731.744096] 0001_sync_drop_ (136757): drop_caches: 3
+[10776.043191] 0001_sync_drop_ (139088): drop_caches: 3
+[10799.353953] 0001_sync_drop_ (140304): drop_caches: 3
+[10807.751718] loop0: detected capacity change from 0 to 8
+[10811.883457] loop0: detected capacity change from 0 to 79328
+[10837.645815] 0001_sync_drop_ (142675): drop_caches: 3
+[10876.005531] 0001_sync_drop_ (144708): drop_caches: 3
+[10919.302785] 0001_sync_drop_ (147001): drop_caches: 3
+[10941.119579] 0001_sync_drop_ (147755): drop_caches: 3
+[10977.991733] 0001_sync_drop_ (149006): drop_caches: 3
+[11014.943808] 0001_sync_drop_ (150261): drop_caches: 3
+[11056.901158] 0001_sync_drop_ (151673): drop_caches: 3
+[11079.159085] 0001_sync_drop_ (152604): drop_caches: 3
+[11107.729430] loop0: detected capacity change from 0 to 8
+[11116.441986] loop0: detected capacity change from 0 to 79328
+[11116.580205] 0001_sync_drop_ (154487): drop_caches: 3
+[11153.841661] 0001_sync_drop_ (156109): drop_caches: 3
+[11196.135826] 0001_sync_drop_ (157916): drop_caches: 3
+[11217.956535] 0001_sync_drop_ (158672): drop_caches: 3
+[11254.910356] 0001_sync_drop_ (159928): drop_caches: 3
+[11291.804737] 0001_sync_drop_ (161174): drop_caches: 3
+[11333.760197] 0001_sync_drop_ (162587): drop_caches: 3
+[11357.025096] 0001_sync_drop_ (163552): drop_caches: 3
+[11395.314222] 0001_sync_drop_ (165188): drop_caches: 3
+[11407.719531] loop0: detected capacity change from 0 to 8
+[11411.316087] loop0: detected capacity change from 0 to 79328
+[11433.635545] 0001_sync_drop_ (167155): drop_caches: 3
+[11476.943816] 0001_sync_drop_ (169016): drop_caches: 3
+[11499.229756] 0001_sync_drop_ (169948): drop_caches: 3
+[11536.544301] 0001_sync_drop_ (171536): drop_caches: 3
+[11573.810302] 0001_sync_drop_ (173123): drop_caches: 3
+[11616.125125] 0001_sync_drop_ (174930): drop_caches: 3
+[11640.280712] 0001_sync_drop_ (176160): drop_caches: 3
+[11679.454772] 0001_sync_drop_ (178205): drop_caches: 3
+[11707.747320] loop0: detected capacity change from 0 to 8
+[11715.398540] loop0: detected capacity change from 0 to 79328
+[11718.641445] 0001_sync_drop_ (180585): drop_caches: 3
+[11762.852870] 0001_sync_drop_ (182915): drop_caches: 3
+[11786.151766] 0001_sync_drop_ (184133): drop_caches: 3
+[11823.901224] 0001_sync_drop_ (186136): drop_caches: 3
+[11862.254036] 0001_sync_drop_ (188167): drop_caches: 3
+[11905.662858] 0001_sync_drop_ (190467): drop_caches: 3
+[11927.555914] 0001_sync_drop_ (191222): drop_caches: 3
+[11964.483560] 0001_sync_drop_ (192467): drop_caches: 3
+[12001.447352] 0001_sync_drop_ (193723): drop_caches: 3
+[12007.737070] loop0: detected capacity change from 0 to 8
+[12011.592419] loop0: detected capacity change from 0 to 79328
+[12043.418383] 0001_sync_drop_ (195465): drop_caches: 3
+[12065.696004] 0001_sync_drop_ (196397): drop_caches: 3
+[12103.011678] 0001_sync_drop_ (197984): drop_caches: 3
+[12140.318063] 0001_sync_drop_ (199571): drop_caches: 3
+[12182.639377] 0001_sync_drop_ (201383): drop_caches: 3
+[12204.482228] 0001_sync_drop_ (202140): drop_caches: 3
+[12241.474726] 0001_sync_drop_ (203398): drop_caches: 3
+[12278.410792] 0001_sync_drop_ (204652): drop_caches: 3
+[12307.721163] loop0: detected capacity change from 0 to 8
+[12316.735957] loop0: detected capacity change from 0 to 79328
+[12320.358853] 0001_sync_drop_ (206394): drop_caches: 3
+[12343.649108] 0001_sync_drop_ (207361): drop_caches: 3
+[12381.958551] 0001_sync_drop_ (208999): drop_caches: 3
+[12420.261301] 0001_sync_drop_ (210637): drop_caches: 3
+[12463.578797] 0001_sync_drop_ (212499): drop_caches: 3
+[12485.881257] 0001_sync_drop_ (213432): drop_caches: 3
+[12523.203637] 0001_sync_drop_ (215021): drop_caches: 3
+[12560.505893] 0001_sync_drop_ (216610): drop_caches: 3
+[12602.834500] 0001_sync_drop_ (218420): drop_caches: 3
+[12607.748019] loop0: detected capacity change from 0 to 8
+[12611.631364] loop0: detected capacity change from 0 to 79328
+[12626.961162] 0001_sync_drop_ (219982): drop_caches: 3
+[12666.196999] 0001_sync_drop_ (222058): drop_caches: 3
+[12705.404998] 0001_sync_drop_ (224106): drop_caches: 3
+[12750.932075] 0001_sync_drop_ (226430): drop_caches: 3
+[12774.260490] 0001_sync_drop_ (227648): drop_caches: 3
+[12812.593117] 0001_sync_drop_ (229669): drop_caches: 3
+[12850.983205] 0001_sync_drop_ (231702): drop_caches: 3
+[12894.397433] 0001_sync_drop_ (233995): drop_caches: 3
+[12907.736478] loop0: detected capacity change from 0 to 8
+[12916.267415] loop0: detected capacity change from 0 to 79328
+[12916.451819] 0001_sync_drop_ (235061): drop_caches: 3
+[12953.386383] 0001_sync_drop_ (236327): drop_caches: 3
+[12990.293476] 0001_sync_drop_ (237573): drop_caches: 3
+[13032.815659] 0001_sync_drop_ (238996): drop_caches: 3
+[13055.114293] 0001_sync_drop_ (239929): drop_caches: 3
+[13092.926983] 0001_sync_drop_ (241518): drop_caches: 3
+[13130.214478] 0001_sync_drop_ (243098): drop_caches: 3
+[13172.509813] 0001_sync_drop_ (244908): drop_caches: 3
+[13194.358197] 0001_sync_drop_ (245666): drop_caches: 3
+[13207.721248] loop0: detected capacity change from 0 to 8
+[13211.222062] loop0: detected capacity change from 0 to 79328
+[13231.285174] 0001_sync_drop_ (247242): drop_caches: 3
+[13268.204056] 0001_sync_drop_ (248499): drop_caches: 3
+[13310.195880] 0001_sync_drop_ (249913): drop_caches: 3
+[13333.475205] 0001_sync_drop_ (250881): drop_caches: 3
+[13371.810259] 0001_sync_drop_ (252515): drop_caches: 3
+[13410.126425] 0001_sync_drop_ (254154): drop_caches: 3
+[13453.439108] 0001_sync_drop_ (256012): drop_caches: 3
+[13475.725805] 0001_sync_drop_ (256946): drop_caches: 3
+[13507.720912] loop0: detected capacity change from 0 to 8
+[13513.126401] 0001_sync_drop_ (258607): drop_caches: 3
+[13515.697612] loop0: detected capacity change from 0 to 79328
+[13550.459693] 0001_sync_drop_ (260454): drop_caches: 3
+[13592.810618] 0001_sync_drop_ (262265): drop_caches: 3
+[13617.027351] 0001_sync_drop_ (263498): drop_caches: 3
+[13656.237192] 0001_sync_drop_ (265548): drop_caches: 3
+[13695.600023] 0001_sync_drop_ (267608): drop_caches: 3
+[13739.863837] 0001_sync_drop_ (269934): drop_caches: 3
+[13763.220790] 0001_sync_drop_ (271152): drop_caches: 3
+[13801.646407] 0001_sync_drop_ (273189): drop_caches: 3
+[13807.756012] loop0: detected capacity change from 0 to 8
+[13811.580441] loop0: detected capacity change from 0 to 79328
+[13839.997061] 0001_sync_drop_ (275561): drop_caches: 3
+[13883.335223] 0001_sync_drop_ (277857): drop_caches: 3
+[13905.188010] 0001_sync_drop_ (278615): drop_caches: 3
+[13942.199977] 0001_sync_drop_ (279873): drop_caches: 3
+[13979.882201] 0001_sync_drop_ (281132): drop_caches: 3
+[14022.438218] 0001_sync_drop_ (282557): drop_caches: 3
+[14044.749904] 0001_sync_drop_ (283490): drop_caches: 3
+[14082.077793] 0001_sync_drop_ (285079): drop_caches: 3
+[14107.732191] loop0: detected capacity change from 0 to 8
+[14115.908905] loop0: detected capacity change from 0 to 79328
+[14119.398626] 0001_sync_drop_ (286996): drop_caches: 3
+[14161.733894] 0001_sync_drop_ (288807): drop_caches: 3
+[14183.601087] 0001_sync_drop_ (289566): drop_caches: 3
+[14220.532717] 0001_sync_drop_ (290815): drop_caches: 3
+[14257.400636] 0001_sync_drop_ (292058): drop_caches: 3
+[14299.974242] 0001_sync_drop_ (293483): drop_caches: 3
+[14323.296223] 0001_sync_drop_ (294453): drop_caches: 3
+[14361.636831] 0001_sync_drop_ (296094): drop_caches: 3
+[14399.973361] 0001_sync_drop_ (297734): drop_caches: 3
+[14407.720379] loop0: detected capacity change from 0 to 8
+[14411.583024] loop0: detected capacity change from 0 to 79328
+[14443.349792] 0001_sync_drop_ (299927): drop_caches: 3
+[14465.673244] 0001_sync_drop_ (300861): drop_caches: 3
+[14503.027468] 0001_sync_drop_ (302451): drop_caches: 3
+[14540.358763] 0001_sync_drop_ (304042): drop_caches: 3
+[14582.711737] 0001_sync_drop_ (305854): drop_caches: 3
+[14606.935169] 0001_sync_drop_ (307087): drop_caches: 3
+[14646.192389] 0001_sync_drop_ (309135): drop_caches: 3
+[14685.436950] 0001_sync_drop_ (311186): drop_caches: 3
+[14707.792798] loop0: detected capacity change from 0 to 8
+[14716.779619] loop0: detected capacity change from 0 to 79328
+[14729.758526] 0001_sync_drop_ (313852): drop_caches: 3
+[14753.452305] 0001_sync_drop_ (315072): drop_caches: 3
+[14791.865200] 0001_sync_drop_ (317108): drop_caches: 3
+[14830.288644] 0001_sync_drop_ (319145): drop_caches: 3
+[14873.687443] 0001_sync_drop_ (321443): drop_caches: 3
+[14895.563896] 0001_sync_drop_ (322201): drop_caches: 3
+[14932.585869] 0001_sync_drop_ (323459): drop_caches: 3
+[14969.593907] 0001_sync_drop_ (324718): drop_caches: 3
+[15007.735886] loop0: detected capacity change from 0 to 8
+[15011.714956] loop0: detected capacity change from 0 to 79328
+[15011.894142] 0001_sync_drop_ (326438): drop_caches: 3
+[15034.198575] 0001_sync_drop_ (327399): drop_caches: 3
+[15071.544011] 0001_sync_drop_ (328989): drop_caches: 3
+[15108.866769] 0001_sync_drop_ (330580): drop_caches: 3
+[15151.237969] 0001_sync_drop_ (332391): drop_caches: 3
+[15173.124751] 0001_sync_drop_ (333150): drop_caches: 3
+[15210.158536] 0001_sync_drop_ (334411): drop_caches: 3
+[15247.116959] 0001_sync_drop_ (335661): drop_caches: 3
+[15289.126935] 0001_sync_drop_ (337078): drop_caches: 3
+[15307.719964] loop0: detected capacity change from 0 to 8
+[15312.489098] 0001_sync_drop_ (338058): drop_caches: 3
+[15316.515278] loop0: detected capacity change from 0 to 79328
+[15351.434309] 0001_sync_drop_ (340039): drop_caches: 3
+[15389.780742] 0001_sync_drop_ (341682): drop_caches: 3
+[15433.139063] 0001_sync_drop_ (343548): drop_caches: 3
+[15455.464325] 0001_sync_drop_ (344483): drop_caches: 3
+[15492.823028] 0001_sync_drop_ (346074): drop_caches: 3
+[15530.183527] 0001_sync_drop_ (347658): drop_caches: 3
+[15572.556559] 0001_sync_drop_ (349470): drop_caches: 3
+[15596.778169] 0001_sync_drop_ (350703): drop_caches: 3
+[15607.759631] loop0: detected capacity change from 0 to 8
+[15612.160852] loop0: detected capacity change from 0 to 79328
+[15636.080164] 0001_sync_drop_ (353111): drop_caches: 3
+[15675.337891] 0001_sync_drop_ (355165): drop_caches: 3
+[15719.602853] 0001_sync_drop_ (357492): drop_caches: 3
+[15742.991719] 0001_sync_drop_ (358712): drop_caches: 3
+[15781.449742] 0001_sync_drop_ (360747): drop_caches: 3
+[15819.966507] 0001_sync_drop_ (362787): drop_caches: 3
+[15863.453130] 0001_sync_drop_ (365087): drop_caches: 3
+[15885.394820] 0001_sync_drop_ (365847): drop_caches: 3
+[15907.738670] loop0: detected capacity change from 0 to 8
+[15916.667904] loop0: detected capacity change from 0 to 79328
+[15922.433060] 0001_sync_drop_ (367434): drop_caches: 3
+[15959.426896] 0001_sync_drop_ (368690): drop_caches: 3
+[16001.509591] 0001_sync_drop_ (370107): drop_caches: 3
+[16023.877596] 0001_sync_drop_ (371042): drop_caches: 3
+[16061.269932] 0001_sync_drop_ (372634): drop_caches: 3
+[16098.650204] 0001_sync_drop_ (374226): drop_caches: 3
+[16141.059970] 0001_sync_drop_ (376040): drop_caches: 3
+[16162.970001] 0001_sync_drop_ (376801): drop_caches: 3
+[16200.058444] 0001_sync_drop_ (378064): drop_caches: 3
+[16207.721381] loop0: detected capacity change from 0 to 8
+[16211.402099] loop0: detected capacity change from 0 to 79328
+[16237.006681] 0001_sync_drop_ (379640): drop_caches: 3
+[16279.070554] 0001_sync_drop_ (381058): drop_caches: 3
+[16302.529292] 0001_sync_drop_ (382029): drop_caches: 3
+[16341.003611] 0001_sync_drop_ (383670): drop_caches: 3
+[16379.423452] 0001_sync_drop_ (385312): drop_caches: 3
+[16422.870232] 0001_sync_drop_ (387179): drop_caches: 3
+[16445.257602] 0001_sync_drop_ (388116): drop_caches: 3
+[16482.655446] 0001_sync_drop_ (389708): drop_caches: 3
+[16507.722128] loop0: detected capacity change from 0 to 8
+[16515.697197] loop0: detected capacity change from 0 to 79328
+[16520.075265] 0001_sync_drop_ (391631): drop_caches: 3
+[16562.493410] 0001_sync_drop_ (393446): drop_caches: 3
+[16586.742064] 0001_sync_drop_ (394681): drop_caches: 3
+[16626.039996] 0001_sync_drop_ (396739): drop_caches: 3
+[16665.393545] 0001_sync_drop_ (398795): drop_caches: 3
+[16709.717205] 0001_sync_drop_ (401124): drop_caches: 3
+[16733.081521] 0001_sync_drop_ (402347): drop_caches: 3
+[16771.565113] 0001_sync_drop_ (404384): drop_caches: 3
+[16807.752405] loop0: detected capacity change from 0 to 8
+[16810.153279] 0001_sync_drop_ (406618): drop_caches: 3
+[16812.151191] loop0: detected capacity change from 0 to 79328
+[16853.674895] 0001_sync_drop_ (409046): drop_caches: 3
+[16875.630017] 0001_sync_drop_ (409807): drop_caches: 3
+[16912.732491] 0001_sync_drop_ (411068): drop_caches: 3
+[16949.767967] 0001_sync_drop_ (412325): drop_caches: 3
+[16992.402492] 0001_sync_drop_ (413751): drop_caches: 3
+[17014.772167] 0001_sync_drop_ (414688): drop_caches: 3
+[17052.159139] 0001_sync_drop_ (416280): drop_caches: 3
+[17089.565241] 0001_sync_drop_ (417872): drop_caches: 3
+[17107.732023] loop0: detected capacity change from 0 to 8
+[17116.780338] loop0: detected capacity change from 0 to 79328
+[17131.989286] 0001_sync_drop_ (420018): drop_caches: 3
+[17153.918311] 0001_sync_drop_ (420780): drop_caches: 3
+[17190.973054] 0001_sync_drop_ (422038): drop_caches: 3
+[17228.055198] 0001_sync_drop_ (423301): drop_caches: 3
+[17270.155928] 0001_sync_drop_ (424716): drop_caches: 3
+[17293.550819] 0001_sync_drop_ (425690): drop_caches: 3
+[17331.992084] 0001_sync_drop_ (427332): drop_caches: 3
+[17370.421308] 0001_sync_drop_ (428974): drop_caches: 3
+[17407.721043] loop0: detected capacity change from 0 to 8
+[17411.759758] loop0: detected capacity change from 0 to 79328
+[17413.837145] 0001_sync_drop_ (431171): drop_caches: 3
+[17436.243405] 0001_sync_drop_ (432112): drop_caches: 3
+[17473.669067] 0001_sync_drop_ (433705): drop_caches: 3
+[17511.090716] 0001_sync_drop_ (435300): drop_caches: 3
+[17553.530875] 0001_sync_drop_ (437114): drop_caches: 3
+[17577.817754] 0001_sync_drop_ (438349): drop_caches: 3
+[17617.280774] 0001_sync_drop_ (440418): drop_caches: 3
+[17656.614053] 0001_sync_drop_ (442467): drop_caches: 3
+[17701.019779] 0001_sync_drop_ (444806): drop_caches: 3
+[17707.755354] loop0: detected capacity change from 0 to 8
+[17716.696490] loop0: detected capacity change from 0 to 79328
+[17724.409211] 0001_sync_drop_ (446356): drop_caches: 3
+[17762.868816] 0001_sync_drop_ (448395): drop_caches: 3
+[17801.380549] 0001_sync_drop_ (450432): drop_caches: 3
+[17844.887415] 0001_sync_drop_ (452732): drop_caches: 3
+[17866.897828] 0001_sync_drop_ (453494): drop_caches: 3
+[17903.972285] 0001_sync_drop_ (454757): drop_caches: 3
+[17940.980624] 0001_sync_drop_ (456016): drop_caches: 3
+[17983.074154] 0001_sync_drop_ (457432): drop_caches: 3
+[18005.476961] 0001_sync_drop_ (458369): drop_caches: 3
+[18007.734389] loop0: detected capacity change from 0 to 8
+[18012.174543] loop0: detected capacity change from 0 to 79328
+[18042.920964] 0001_sync_drop_ (460292): drop_caches: 3
+[18080.351331] 0001_sync_drop_ (461887): drop_caches: 3
+[18122.804121] 0001_sync_drop_ (463701): drop_caches: 3
+[18144.770813] 0001_sync_drop_ (464464): drop_caches: 3
+[18181.863263] 0001_sync_drop_ (465728): drop_caches: 3
+[18218.956992] 0001_sync_drop_ (466992): drop_caches: 3
+[18261.065342] 0001_sync_drop_ (468409): drop_caches: 3
+[18284.494497] 0001_sync_drop_ (469383): drop_caches: 3
+[18307.721221] loop0: detected capacity change from 0 to 8
+[18316.261259] loop0: detected capacity change from 0 to 79328
+[18322.961295] 0001_sync_drop_ (471354): drop_caches: 3
+[18361.394129] 0001_sync_drop_ (472999): drop_caches: 3
+[18404.845629] 0001_sync_drop_ (474870): drop_caches: 3
+[18427.260212] 0001_sync_drop_ (475809): drop_caches: 3
+[18464.705798] 0001_sync_drop_ (477404): drop_caches: 3
+[18502.129753] 0001_sync_drop_ (478998): drop_caches: 3
+[18544.566178] 0001_sync_drop_ (480812): drop_caches: 3
+[18568.860513] 0001_sync_drop_ (482048): drop_caches: 3
+[18607.748520] loop0: detected capacity change from 0 to 8
+[18608.536749] 0001_sync_drop_ (484158): drop_caches: 3
+[18611.874712] loop0: detected capacity change from 0 to 79328
+[18647.872141] 0001_sync_drop_ (486502): drop_caches: 3
+[18692.313977] 0001_sync_drop_ (488839): drop_caches: 3
+[18715.789011] 0001_sync_drop_ (490064): drop_caches: 3
+[18754.366039] 0001_sync_drop_ (492127): drop_caches: 3
+[18792.927120] 0001_sync_drop_ (494166): drop_caches: 3
+[18836.494427] 0001_sync_drop_ (496471): drop_caches: 3
+[18858.454020] 0001_sync_drop_ (497235): drop_caches: 3
+[18895.577637] 0001_sync_drop_ (498499): drop_caches: 3
+[18907.737215] loop0: detected capacity change from 0 to 8
+[18916.387353] loop0: detected capacity change from 0 to 79328

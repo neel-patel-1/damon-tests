@@ -1,0 +1,241 @@
+
+<img src=../plots/runtime.png />
+<img src=../plots/kdamond_cpu_util.png />
+<img src=../plots/memused.avg.png />
+<img src=../plots/rss.avg.png />
+<img src=../plots/pgmajfaults.png />
+<img src=../plots/psi_mem_some_us.png />
+<img src=../plots/acc_per_sec.png />
+<br><br>
+<pre>
+=======
+Summary
+=======
+
+runtime             orig    prcl_quota_1ms (overhead) prcl_quota_10ms (overhead) prcl_quota_25ms (overhead) prcl_quota_100ms (overhead) prcl_quota_1000ms (overhead)
+masim/random        15.170  15.172         (0.01)     15.176          (0.04)     15.172          (0.01)     15.172           (0.01)     15.159            (-0.07)
+masim/shrinking_wss 30.207  30.196         (-0.04)    30.214          (0.02)     30.205          (-0.01)    30.180           (-0.09)    30.182            (-0.08)
+masim/stairs        30.197  30.210         (0.04)     30.206          (0.03)     30.213          (0.05)     30.212           (0.05)     30.193            (-0.01)
+masim/zigzag_30secs 35.206  35.224         (0.05)     35.236          (0.09)     35.224          (0.05)     35.231           (0.07)     35.195            (-0.03)
+total               110.780 110.802        (0.02)     110.832         (0.05)     110.814         (0.03)     110.795          (0.01)     110.729           (-0.05)
+average             27.695  27.700         (0.02)     27.708          (0.04)     27.704          (0.03)     27.699           (0.01)     27.682            (-0.05)
+
+
+kdamond_cpu_util    orig  prcl_quota_1ms (overhead) prcl_quota_10ms (overhead) prcl_quota_25ms (overhead) prcl_quota_100ms (overhead) prcl_quota_1000ms (overhead)
+masim/random        0.000 0.188          (0.19)     0.210           (0.21)     0.203           (0.20)     0.195            (0.20)     0.210             (0.21)
+masim/shrinking_wss 0.000 0.147          (0.15)     0.167           (0.17)     0.185           (0.18)     0.185            (0.18)     0.192             (0.19)
+masim/stairs        0.000 0.153          (0.15)     0.237           (0.24)     0.310           (0.31)     0.342            (0.34)     0.345             (0.35)
+masim/zigzag_30secs 0.000 0.154          (0.15)     0.311           (0.31)     0.630           (0.63)     1.057            (1.06)     1.069             (1.07)
+total               0.000 0.642          (0.64)     0.926           (0.93)     1.329           (1.33)     1.779            (1.78)     1.816             (1.82)
+average             0.000 0.160          (0.16)     0.231           (0.23)     0.332           (0.33)     0.445            (0.44)     0.454             (0.45)
+
+
+memused.avg         orig       prcl_quota_1ms (overhead) prcl_quota_10ms (overhead) prcl_quota_25ms (overhead) prcl_quota_100ms (overhead) prcl_quota_1000ms (overhead)
+masim/random        86514.000  144447.000     (66.96)    137778.000      (59.26)    136455.000      (57.73)    143476.000       (65.84)    88787.000         (2.63)
+masim/shrinking_wss 44238.000  55242.000      (24.87)    65089.000       (47.13)    51800.000       (17.09)    55371.000        (25.17)    62573.000         (41.45)
+masim/stairs        90162.000  155383.000     (72.34)    116820.000      (29.57)    68690.000       (-23.81)   79751.000        (-11.55)   72474.000         (-19.62)
+masim/zigzag_30secs 219547.000 475605.000     (116.63)   234259.000      (6.70)     286288.000      (30.40)    138159.000       (-37.07)   181537.000        (-17.31)
+total               440461.000 830677.000     (88.59)    553946.000      (25.77)    543233.000      (23.33)    416757.000       (-5.38)    405371.000        (-7.97)
+average             110115.000 207669.000     (70.20)    138486.000      (35.66)    135808.000      (20.35)    104189.000       (10.60)    101343.000        (1.79)
+
+
+rss.avg             orig       prcl_quota_1ms (overhead) prcl_quota_10ms (overhead) prcl_quota_25ms (overhead) prcl_quota_100ms (overhead) prcl_quota_1000ms (overhead)
+masim/random        103168.000 103140.000     (-0.03)    103094.000      (-0.07)    103094.000      (-0.07)    103085.000       (-0.08)    103113.000        (-0.05)
+masim/shrinking_wss 10486.000  7529.000       (-28.20)   4662.000        (-55.54)   4544.000        (-56.67)   4438.000         (-57.68)   4612.000          (-56.02)
+masim/stairs        103277.000 99584.000      (-3.58)    70139.000       (-32.09)   27872.000       (-73.01)   27446.000        (-73.42)   27552.000         (-73.32)
+masim/zigzag_30secs 200944.000 198275.000     (-1.33)    185933.000      (-7.47)    146653.000      (-27.02)   119796.000       (-40.38)   120354.000        (-40.11)
+total               417875.000 408528.000     (-2.24)    363828.000      (-12.93)   282163.000      (-32.48)   254765.000       (-39.03)   255631.000        (-38.83)
+average             104469.000 102132.000     (-8.28)    90957.000       (-23.79)   70540.800       (-39.19)   63691.200        (-42.89)   63907.800         (-42.37)
+
+
+pgmajfaults         orig    prcl_quota_1ms (overhead) prcl_quota_10ms (overhead) prcl_quota_25ms (overhead)  prcl_quota_100ms (overhead)  prcl_quota_1000ms (overhead)
+masim/random        56.000  254.000        (353.57)   619.000         (1005.36)  1541.000        (2651.79)   264.000          (371.43)    1384.000          (2371.43)
+masim/shrinking_wss 54.000  146.000        (170.37)   1081.000        (1901.85)  1250.000        (2214.81)   3218.000         (5859.26)   3332.000          (6070.37)
+masim/stairs        57.000  141.000        (147.37)   10229.000       (17845.60) 26311.000       (46059.60)  26732.000        (46798.20)  25986.000         (45489.50)
+masim/zigzag_30secs 54.000  224.000        (314.82)   41727.000       (77172.20) 216809.000      (401398.00) 407497.000       (754524.00) 414138.000        (766822.00)
+total               221.000 765.000        (246.15)   53656.000       (24178.70) 245911.000      (111172.00) 437711.000       (197959.00) 444840.000        (201185.00)
+average             55.250  191.250        (246.53)   13414.000       (24481.20) 61477.800       (113081.00) 109428.000       (201888.00) 111210.000        (205188.00)
+
+
+psi_mem_some_us     orig  prcl_quota_1ms (overhead) prcl_quota_10ms (overhead) prcl_quota_25ms (overhead)  prcl_quota_100ms (overhead)  prcl_quota_1000ms (overhead)
+masim/random        0.000 282.000        (282.00)   1888.000        (1888.00)  3111.000        (3111.00)   954.000          (954.00)    2806.000          (2806.00)
+masim/shrinking_wss 0.000 601.000        (601.00)   22927.000       (22927.00) 2092.000        (2092.00)   125018.000       (125018.00) 93527.000         (93527.00)
+masim/stairs        0.000 6554.000       (6554.00)  21290.000       (21290.00) 34226.000       (34226.00)  51101.000        (51101.00)  88593.000         (88593.00)
+masim/zigzag_30secs 0.000 3088.000       (3088.00)  36000.000       (36000.00) 167870.000      (167870.00) 412344.000       (412344.00) 361552.000        (361552.00)
+total               0.000 10525.000      (10525.00) 82105.000       (82105.00) 207299.000      (207299.00) 589417.000       (589417.00) 546478.000        (546478.00)
+average             0.000 2631.250       (2631.25)  20526.200       (20526.20) 51824.800       (51824.80)  147354.000       (147354.00) 136620.000        (136620.00)
+
+
+=====
+Stats
+=====
+
+runtime_avg orig prcl_quota_1ms prcl_quota_10ms prcl_quota_25ms prcl_quota_100ms prcl_quota_1000ms
+
+
+
+
+
+
+kdamond_cpu_util_avg orig prcl_quota_1ms prcl_quota_10ms prcl_quota_25ms prcl_quota_100ms prcl_quota_1000ms
+
+
+
+
+
+
+memused.avg_avg orig prcl_quota_1ms prcl_quota_10ms prcl_quota_25ms prcl_quota_100ms prcl_quota_1000ms
+
+
+
+
+
+
+rss.avg_avg orig prcl_quota_1ms prcl_quota_10ms prcl_quota_25ms prcl_quota_100ms prcl_quota_1000ms
+
+
+
+
+
+
+pgmajfaults_avg orig prcl_quota_1ms prcl_quota_10ms prcl_quota_25ms prcl_quota_100ms prcl_quota_1000ms
+
+
+
+
+
+
+psi_mem_some_us_avg orig prcl_quota_1ms prcl_quota_10ms prcl_quota_25ms prcl_quota_100ms prcl_quota_1000ms
+
+
+
+
+
+
+runtime_stdev orig prcl_quota_1ms prcl_quota_10ms prcl_quota_25ms prcl_quota_100ms prcl_quota_1000ms
+
+
+
+
+
+
+kdamond_cpu_util_stdev orig prcl_quota_1ms prcl_quota_10ms prcl_quota_25ms prcl_quota_100ms prcl_quota_1000ms
+
+
+
+
+
+
+memused.avg_stdev orig prcl_quota_1ms prcl_quota_10ms prcl_quota_25ms prcl_quota_100ms prcl_quota_1000ms
+
+
+
+
+
+
+rss.avg_stdev orig prcl_quota_1ms prcl_quota_10ms prcl_quota_25ms prcl_quota_100ms prcl_quota_1000ms
+
+
+
+
+
+
+pgmajfaults_stdev orig prcl_quota_1ms prcl_quota_10ms prcl_quota_25ms prcl_quota_100ms prcl_quota_1000ms
+
+
+
+
+
+
+psi_mem_some_us_stdev orig prcl_quota_1ms prcl_quota_10ms prcl_quota_25ms prcl_quota_100ms prcl_quota_1000ms
+
+
+
+
+
+
+runtime_min orig prcl_quota_1ms prcl_quota_10ms prcl_quota_25ms prcl_quota_100ms prcl_quota_1000ms
+
+
+
+
+
+
+kdamond_cpu_util_min orig prcl_quota_1ms prcl_quota_10ms prcl_quota_25ms prcl_quota_100ms prcl_quota_1000ms
+
+
+
+
+
+
+memused.avg_min orig prcl_quota_1ms prcl_quota_10ms prcl_quota_25ms prcl_quota_100ms prcl_quota_1000ms
+
+
+
+
+
+
+rss.avg_min orig prcl_quota_1ms prcl_quota_10ms prcl_quota_25ms prcl_quota_100ms prcl_quota_1000ms
+
+
+
+
+
+
+pgmajfaults_min orig prcl_quota_1ms prcl_quota_10ms prcl_quota_25ms prcl_quota_100ms prcl_quota_1000ms
+
+
+
+
+
+
+psi_mem_some_us_min orig prcl_quota_1ms prcl_quota_10ms prcl_quota_25ms prcl_quota_100ms prcl_quota_1000ms
+
+
+
+
+
+
+runtime_max orig prcl_quota_1ms prcl_quota_10ms prcl_quota_25ms prcl_quota_100ms prcl_quota_1000ms
+
+
+
+
+
+
+kdamond_cpu_util_max orig prcl_quota_1ms prcl_quota_10ms prcl_quota_25ms prcl_quota_100ms prcl_quota_1000ms
+
+
+
+
+
+
+memused.avg_max orig prcl_quota_1ms prcl_quota_10ms prcl_quota_25ms prcl_quota_100ms prcl_quota_1000ms
+
+
+
+
+
+
+rss.avg_max orig prcl_quota_1ms prcl_quota_10ms prcl_quota_25ms prcl_quota_100ms prcl_quota_1000ms
+
+
+
+
+
+
+pgmajfaults_max orig prcl_quota_1ms prcl_quota_10ms prcl_quota_25ms prcl_quota_100ms prcl_quota_1000ms
+
+
+
+
+
+
+psi_mem_some_us_max orig prcl_quota_1ms prcl_quota_10ms prcl_quota_25ms prcl_quota_100ms prcl_quota_1000ms
+
+
+
+
+
+
+</pre>

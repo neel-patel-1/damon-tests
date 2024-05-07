@@ -1,0 +1,15 @@
+row 0:	              123670 accesses/msec, 2727 msecs run
+row 1:	              124487 accesses/msec, 2727 msecs run
+row 2:	              124535 accesses/msec, 2727 msecs run
+row 3:	              124631 accesses/msec, 2727 msecs run
+row 4:	              124439 accesses/msec, 2727 msecs run
+row 5:	              124583 accesses/msec, 2727 msecs run
+row 6:	              124583 accesses/msec, 2727 msecs run
+row 7:	              124631 accesses/msec, 2727 msecs run
+row 8:	              124679 accesses/msec, 2727 msecs run
+row 9:	              124679 accesses/msec, 2727 msecs run
+row 10:	              124150 accesses/msec, 2727 msecs run
+
+real	0m30.192s
+user	0m30.078s
+sys	0m0.012s

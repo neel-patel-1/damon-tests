@@ -1,0 +1,241 @@
+
+<img src=../plots/runtime.png />
+<img src=../plots/kdamond_cpu_util.png />
+<img src=../plots/memused.avg.png />
+<img src=../plots/rss.avg.png />
+<img src=../plots/pgmajfaults.png />
+<img src=../plots/psi_mem_some_us.png />
+<img src=../plots/acc_per_sec.png />
+<br><br>
+<pre>
+=======
+Summary
+=======
+
+runtime             orig    rec     (overhead) prcl    (overhead) plrus   (overhead) ttmo    (overhead) thp     (overhead) ethp    (overhead)
+masim/random        15.161  15.163  (0.02)     15.164  (0.02)     15.164  (0.02)     15.166  (0.04)     15.163  (0.01)     15.166  (0.03)
+masim/shrinking_wss 30.186  30.179  (-0.02)    30.177  (-0.03)    30.183  (-0.01)    30.201  (0.05)     30.187  (0.00)     30.181  (-0.02)
+masim/stairs        30.203  30.194  (-0.03)    30.205  (0.01)     30.203  (0.00)     30.216  (0.04)     30.201  (-0.01)    30.198  (-0.02)
+masim/zigzag_30secs 35.215  35.207  (-0.02)    35.209  (-0.02)    35.214  (-0.00)    35.218  (0.01)     35.210  (-0.01)    35.202  (-0.04)
+total               110.765 110.744 (-0.02)    110.755 (-0.01)    110.765 (0.00)     110.802 (0.03)     110.760 (-0.00)    110.747 (-0.02)
+average             27.691  27.686  (-0.01)    27.689  (-0.00)    27.691  (0.00)     27.700  (0.03)     27.690  (-0.00)    27.687  (-0.01)
+
+
+kdamond_cpu_util    orig  rec   (overhead) prcl  (overhead) plrus (overhead) ttmo  (overhead) thp   (overhead) ethp  (overhead)
+masim/random        0.000 0.171 (0.17)     0.173 (0.17)     1.216 (1.22)     0.174 (0.17)     0.000 (0.00)     0.181 (0.18)
+masim/shrinking_wss 0.000 0.152 (0.15)     0.159 (0.16)     0.222 (0.22)     0.134 (0.13)     0.000 (0.00)     0.146 (0.15)
+masim/stairs        0.000 0.155 (0.15)     0.271 (0.27)     0.279 (0.28)     0.163 (0.16)     0.000 (0.00)     0.163 (0.16)
+masim/zigzag_30secs 0.000 0.158 (0.16)     0.168 (0.17)     1.462 (1.46)     0.208 (0.21)     0.000 (0.00)     0.160 (0.16)
+total               0.000 0.636 (0.64)     0.771 (0.77)     3.179 (3.18)     0.679 (0.68)     0.000 (0.00)     0.650 (0.65)
+average             0.000 0.159 (0.16)     0.193 (0.19)     0.795 (0.79)     0.170 (0.17)     0.000 (0.00)     0.162 (0.16)
+
+
+memused.avg         orig       rec        (overhead) prcl       (overhead) plrus      (overhead) ttmo       (overhead) thp        (overhead) ethp       (overhead)
+masim/random        118790.000 168422.200 (41.78)    129710.600 (9.19)     123787.200 (4.21)     110592.800 (-6.90)    115080.700 (-3.12)    142394.800 (19.87)
+masim/shrinking_wss 47325.000  115436.300 (143.92)   77838.300  (64.48)    45760.700  (-3.31)    35729.600  (-24.50)   45510.800  (-3.83)    85860.300  (81.43)
+masim/stairs        146519.400 194699.600 (32.88)    114599.000 (-21.79)   117125.200 (-20.06)   114401.700 (-21.92)   138646.800 (-5.37)    148359.500 (1.26)
+masim/zigzag_30secs 221569.500 291943.400 (31.76)    254469.700 (14.85)    208268.800 (-6.00)    197348.800 (-10.93)   237385.000 (7.14)     251014.900 (13.29)
+total               534204.000 770501.000 (44.23)    576618.000 (7.94)     494942.000 (-7.35)    458074.000 (-14.25)   536624.000 (0.45)     627629.000 (17.49)
+average             133551.000 192625.000 (62.59)    144154.000 (16.68)    123736.000 (-6.29)    114518.000 (-16.06)   134156.000 (-1.30)    156907.000 (28.96)
+
+
+rss.avg             orig       rec        (overhead) prcl       (overhead) plrus      (overhead) ttmo       (overhead) thp        (overhead) ethp       (overhead)
+masim/random        103168.000 103168.000 (0.00)     103172.500 (0.00)     103109.100 (-0.06)    103017.700 (-0.15)    103085.200 (-0.08)    103168.000 (0.00)
+masim/shrinking_wss 10486.000  10486.000  (0.00)     6156.400   (-41.29)   9237.300   (-11.91)   8384.700   (-20.04)   10525.200  (0.37)     10486.000  (0.00)
+masim/stairs        103277.000 103277.000 (0.00)     59980.900  (-41.92)   93242.200  (-9.72)    91941.100  (-10.98)   103298.600 (0.02)     103277.000 (0.00)
+masim/zigzag_30secs 200944.000 200944.000 (0.00)     197733.100 (-1.60)    197930.100 (-1.50)    197157.500 (-1.88)    200969.200 (0.01)     200944.000 (0.00)
+total               417875.000 417875.000 (0.00)     367042.000 (-12.16)   403518.000 (-3.44)    400502.000 (-4.16)    417878.000 (0.00)     417875.000 (0.00)
+average             104469.000 104469.000 (0.00)     91760.500  (-21.20)   100880.000 (-5.80)    100126.000 (-8.26)    104470.000 (0.08)     104469.000 (0.00)
+
+
+pgmajfaults         orig    rec     (overhead) prcl      (overhead) plrus     (overhead) ttmo      (overhead) thp      (overhead) ethp     (overhead)
+masim/random        78.400  197.600 (152.04)   104.500   (33.29)    2009.500  (2463.14)  3615.100  (4511.10)  1791.700 (2185.33)  126.400  (61.22)
+masim/shrinking_wss 87.100  230.100 (164.18)   194.100   (122.85)   3970.100  (4458.09)  5003.000  (5643.97)  2153.800 (2372.79)  916.200  (951.89)
+masim/stairs        100.100 212.100 (111.89)   16695.000 (16578.30) 11893.300 (11781.40) 10644.400 (10533.80) 1886.500 (1784.62)  560.700  (460.14)
+masim/zigzag_30secs 81.900  223.300 (172.65)   176.900   (116.00)   14381.600 (17460.00) 9871.400  (11953.00) 921.200  (1024.79)  413.400  (404.76)
+total               347.500 863.100 (148.37)   17170.500 (4841.15)  32254.500 (9181.87)  29133.900 (8283.86)  6753.200 (1843.37)  2016.700 (480.35)
+average             86.875  215.775 (150.19)   4292.620  (4212.60)  8063.620  (9040.65)  7283.480  (8160.48)  1688.300 (1841.88)  504.175  (469.51)
+
+
+psi_mem_some_us     orig  rec   (overhead) prcl     (overhead) plrus      (overhead)  ttmo       (overhead)  thp   (overhead) ethp  (overhead)
+masim/random        0.000 0.000 (0.00)     9.600    (9.60)     23458.200  (23458.20)  19103.800  (19103.80)  0.000 (0.00)     0.000 (0.00)
+masim/shrinking_wss 0.000 0.000 (0.00)     1419.000 (1419.00)  28845.000  (28845.00)  28606.700  (28606.70)  0.000 (0.00)     0.000 (0.00)
+masim/stairs        0.000 0.000 (0.00)     2150.000 (2150.00)  23928.200  (23928.20)  20843.000  (20843.00)  0.000 (0.00)     0.000 (0.00)
+masim/zigzag_30secs 0.000 0.000 (0.00)     2891.600 (2891.60)  65989.200  (65989.20)  58219.700  (58219.70)  0.100 (0.10)     0.000 (0.00)
+total               0.000 0.000 (0.00)     6470.200 (6470.20)  142221.000 (142221.00) 126773.000 (126773.00) 0.100 (0.10)     0.000 (0.00)
+average             0.000 0.000 (0.00)     1617.550 (1617.55)  35555.200  (35555.20)  31693.200  (31693.20)  0.025 (0.03)     0.000 (0.00)
+
+
+=====
+Stats
+=====
+
+runtime_avg orig rec prcl plrus ttmo thp ethp
+
+
+
+
+
+
+kdamond_cpu_util_avg orig rec prcl plrus ttmo thp ethp
+
+
+
+
+
+
+memused.avg_avg orig rec prcl plrus ttmo thp ethp
+
+
+
+
+
+
+rss.avg_avg orig rec prcl plrus ttmo thp ethp
+
+
+
+
+
+
+pgmajfaults_avg orig rec prcl plrus ttmo thp ethp
+
+
+
+
+
+
+psi_mem_some_us_avg orig rec prcl plrus ttmo thp ethp
+
+
+
+
+
+
+runtime_stdev orig rec prcl plrus ttmo thp ethp
+
+
+
+
+
+
+kdamond_cpu_util_stdev orig rec prcl plrus ttmo thp ethp
+
+
+
+
+
+
+memused.avg_stdev orig rec prcl plrus ttmo thp ethp
+
+
+
+
+
+
+rss.avg_stdev orig rec prcl plrus ttmo thp ethp
+
+
+
+
+
+
+pgmajfaults_stdev orig rec prcl plrus ttmo thp ethp
+
+
+
+
+
+
+psi_mem_some_us_stdev orig rec prcl plrus ttmo thp ethp
+
+
+
+
+
+
+runtime_min orig rec prcl plrus ttmo thp ethp
+
+
+
+
+
+
+kdamond_cpu_util_min orig rec prcl plrus ttmo thp ethp
+
+
+
+
+
+
+memused.avg_min orig rec prcl plrus ttmo thp ethp
+
+
+
+
+
+
+rss.avg_min orig rec prcl plrus ttmo thp ethp
+
+
+
+
+
+
+pgmajfaults_min orig rec prcl plrus ttmo thp ethp
+
+
+
+
+
+
+psi_mem_some_us_min orig rec prcl plrus ttmo thp ethp
+
+
+
+
+
+
+runtime_max orig rec prcl plrus ttmo thp ethp
+
+
+
+
+
+
+kdamond_cpu_util_max orig rec prcl plrus ttmo thp ethp
+
+
+
+
+
+
+memused.avg_max orig rec prcl plrus ttmo thp ethp
+
+
+
+
+
+
+rss.avg_max orig rec prcl plrus ttmo thp ethp
+
+
+
+
+
+
+pgmajfaults_max orig rec prcl plrus ttmo thp ethp
+
+
+
+
+
+
+psi_mem_some_us_max orig rec prcl plrus ttmo thp ethp
+
+
+
+
+
+
+</pre>
