@@ -1,3 +1,32 @@
+Results from "Evaluating Data Access Pattern Aware Memory Management"
+```
+Quota Sweep Plots: 
+---
+results directory: masim_quota_sweep_results CFG
+config: masim_goals_config.sh
+reports directory: masim_quota_sweep_reports
+
+Generating report:
+sudo ODIR_ROOT=$PWD/masim_quota_sweep_results CFG=masim_goals_config.sh ./mk_reports_to.sh masim_quota_sweep_reports
+
+Microbenchmark Plots:
+---
+results directory: masim_results
+config: masim_patterns_config.sh
+reports directory: masim_micro_reports
+
+Time to Convergence Feedback Autotuning Plot:
+---
+#terminal 1
+n869p538@ubuntu:perf$ sudo ./../../damo/damo schemes "../../masim/masim ../../masim/configs/10GB.cfg --repeat 100 " --damos_action pageout --damos_access_rate 0% max --damos_age 0s max --damos_quotas 1000ms 10GiB 1s --damos_quota_goal user_inpu
+# terminal 2
+n869p538@ubuntu:perf$ ./aggressor_cpu_tuning.sh
+
+#run once without tuning and once with tuning by modifying the aggressor_cpu_tuning.sh script which tracks the cpu utilization for you
+---
+
+```
+
 This directory contains files for the performance test of DAMON.
 
 The test measures the runtime and memory footprint of various workloads with
@@ -93,3 +122,9 @@ To run masim microbenchmarks and specify report output directory using results.
     $ sudo CFG=masim_patterns_config.sh ./masim_run.sh
     $ sudo ODIR_ROOT=$PWD/masim_results CFG=masim_patterns_config.sh ./post.sh
     $ sudo ODIR_ROOT=$PWD/masim_results CFG=masim_patterns_config.sh ./mk_reports_to.sh masim_reports
+
+
+Results from paper:
+Fig (Quota Microbenchmark Sweep)
+n869p538@castor:perf$ git add masim_quota_sweep_results/
+n869p538@castor:perf$ git add masim_reports_quota_sweep_results/
